@@ -7,7 +7,7 @@ import lombok.Data;
 @Table(name = "MS03_PROVEEDORES") 
 @Data 
 public class Proveedor {
-
+//lokokoo
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
