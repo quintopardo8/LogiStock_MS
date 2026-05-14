@@ -9,9 +9,9 @@
         <relativePath/> </parent>
     
     <groupId>com.example</groupId>
-    <artifactId>LogiStock_MS_03</artifactId>
+    <artifactId>LogiStock_MS_03_Provedor</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>LogiStock_MS_03</name>
+    <name>LogiStock_MS_03_Provedor</name>
     <url/>
     <licenses>
         <license/>
