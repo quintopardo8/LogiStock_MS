@@ -1,4 +1,4 @@
-package com.example.LogiStock_MS_03.controller;
+package com.example.LogiStock_MS_03_Provedor.controller;
 
 import com.example.LogiStock_MS_03.model.Proveedor;
 import com.example.LogiStock_MS_03.service.ProveedorService;
