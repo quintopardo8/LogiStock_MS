@@ -1,7 +1,7 @@
-package com.example.LogiStock_MS_03.service;
+package com.example.LogiStock_MS_03_Proveedor.service;
 
-import com.example.LogiStock_MS_03.model.Proveedor;
-import com.example.LogiStock_MS_03.repository.ProveedorRepository;
+import com.example.LogiStock_MS_03_Proveedor.model.Proveedor;
+import com.example.LogiStock_MS_03_Proveedor.repository.ProveedorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -12,7 +12,7 @@ public class ProveedorService {
     @Autowired
     private ProveedorRepository repository;
 
-    public List<Proveedor> listarTodo() {
+    public List<Proveedor> listarTodos() {
         return repository.findAll();
     }
 

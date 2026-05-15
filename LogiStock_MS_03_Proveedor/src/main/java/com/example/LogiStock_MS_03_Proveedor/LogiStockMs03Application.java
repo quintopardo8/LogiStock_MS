@@ -1,13 +1,11 @@
-package com.example.LogiStock_MS_03;
+package com.example.LogiStock_MS_03_Proveedor;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class LogiStockMs03Application {
-//gygg
 	public static void main(String[] args) {
 		SpringApplication.run(LogiStockMs03Application.class, args);
 	}
-
 }

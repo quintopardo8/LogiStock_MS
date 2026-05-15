@@ -1,21 +1,16 @@
-package com.example.LogiStock_MS_03.model;
+package com.example.LogiStock_MS_03_Proveedor.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
-@Table(name = "MS03_PROVEEDORES") 
-@Data 
+@Table(name = "PROVEEDORES")
+@Data
 public class Proveedor {
-//lokokoo
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false)
     private String nombre;
-
     private String contacto;
-
-    private String telefono;
+    private String rubro;
 }

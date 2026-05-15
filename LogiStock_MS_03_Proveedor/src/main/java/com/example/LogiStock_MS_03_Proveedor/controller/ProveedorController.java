@@ -1,7 +1,7 @@
-package com.example.LogiStock_MS_03_Provedor.controller;
+package com.example.LogiStock_MS_03_Proveedor.controller;
 
-import com.example.LogiStock_MS_03.model.Proveedor;
-import com.example.LogiStock_MS_03.service.ProveedorService;
+import com.example.LogiStock_MS_03_Proveedor.model.Proveedor;
+import com.example.LogiStock_MS_03_Proveedor.service.ProveedorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -15,11 +15,11 @@ public class ProveedorController {
 
     @GetMapping
     public List<Proveedor> listar() {
-        return service.listarTodo();
+        return service.listarTodos();
     }
 
     @PostMapping
-    public Proveedor crear(@RequestBody Proveedor proveedor) {
+    public Proveedor guardar(@RequestBody Proveedor proveedor) {
         return service.guardar(proveedor);
     }
 }
