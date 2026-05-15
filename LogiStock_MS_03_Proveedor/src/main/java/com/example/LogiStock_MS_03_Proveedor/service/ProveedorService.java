@@ -42,10 +42,10 @@ public class ProveedorService {
     @Transactional
     public Optional<Proveedor> actualizar(Long id, Proveedor detalles) {
         return repository.findById(id).map(existente -> {
-            existente.setNombre(detalles.getNombre());
+            existente.setNombreEmpresa(detalles.getNombreEmpresa());
             existente.setContacto(detalles.getContacto());
-            existente.setRubro(detalles.getRubro());
-            existente.setRut(detalles.getRut());
+            existente.setEmail(detalles.getEmail());
+            existente.setTelefono(detalles.getTelefono());
             return repository.save(existente);
         });
     }

@@ -1,7 +1,7 @@
-package com.example.LogiStock_MS_04_Cliente.service;
+package LogiStock_MS_04_Cliente.service;
 
-import com.example.LogiStock_MS_04_Cliente.model.Cliente;
-import com.example.LogiStock_MS_04_Cliente.repository.ClienteRepository;
+import LogiStock_MS_04_Cliente.model.Cliente;
+import LogiStock_MS_04_Cliente.repository.ClienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;

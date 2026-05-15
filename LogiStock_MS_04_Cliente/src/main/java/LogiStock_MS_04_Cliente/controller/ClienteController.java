@@ -1,8 +1,8 @@
-package com.example.LogiStock_MS_04_Cliente.controller;
+package LogiStock_MS_04_Cliente.controller;
 
-import com.example.LogiStock_MS_04_Cliente.dto.ClienteDTO;
-import com.example.LogiStock_MS_04_Cliente.model.Cliente;
-import com.example.LogiStock_MS_04_Cliente.service.ClienteService;
+import LogiStock_MS_04_Cliente.dto.ClienteDTO;
+import LogiStock_MS_04_Cliente.model.Cliente;
+import LogiStock_MS_04_Cliente.service.ClienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,8 +17,13 @@ public class ClienteController {
     @Autowired
     private ClienteService service;
 
-    private ClienteDTO mapiarADto(Cliente c) {
-        return new ClienteDTO(c.getId(), c.getNombre() + " " + c.getApellido(), c.getEmail());
+private ClienteDTO mapiarADto(Cliente c) {
+        return new ClienteDTO(
+            c.getId(), 
+            c.getNombre() + " " + c.getApellido(), 
+            c.getEmail(), 
+            c.getTelefono() 
+        );
     }
 
     @GetMapping

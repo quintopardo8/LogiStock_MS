@@ -8,26 +8,42 @@ public class Proveedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombre;
-    private String contacto;
-    private String rubro;
-    private String rut;
 
-    // Constructores
+    @Column(name = "NOMBRE_EMPRESA")
+    private String nombreEmpresa;
+
+    @Column(name = "CONTACTO")
+    private String contacto;
+
+    @Column(name = "EMAIL")
+    private String email;
+
+    @Column(name = "TELEFONO")
+    private String telefono;
+
     public Proveedor() {}
-    public Proveedor(Long id, String nombre, String contacto, String rubro, String rut) {
-        this.id = id; this.nombre = nombre; this.contacto = contacto; this.rubro = rubro; this.rut = rut;
+
+    // Constructor con parámetros actualizado
+    public Proveedor(Long id, String nombreEmpresa, String contacto, String email, String telefono) {
+        this.id = id;
+        this.nombreEmpresa = nombreEmpresa;
+        this.contacto = contacto;
+        this.email = email;
+        this.telefono = telefono;
     }
 
-    // Getters y Setters Manuales
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
-    public String getNombre() { return nombre; }
-    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public String getNombreEmpresa() { return nombreEmpresa; }
+    public void setNombreEmpresa(String nombreEmpresa) { this.nombreEmpresa = nombreEmpresa; }
+
     public String getContacto() { return contacto; }
     public void setContacto(String contacto) { this.contacto = contacto; }
-    public String getRubro() { return rubro; }
-    public void setRubro(String rubro) { this.rubro = rubro; }
-    public String getRut() { return rut; }
-    public void setRut(String rut) { this.rut = rut; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+
+    public String getTelefono() { return telefono; }
+    public void setTelefono(String telefono) { this.telefono = telefono; }
 }

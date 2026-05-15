@@ -19,20 +19,24 @@ public class ProveedorController {
     @Autowired
     private ProveedorService service;
 
+    // Ajustado a los 5 campos del DTO nuevo
     private ProveedorDTO mapiarADto(Proveedor p) {
         return new ProveedorDTO(
                 p.getId(),
-                p.getNombre(),
+                p.getNombreEmpresa(),
                 p.getContacto(),
-                p.getRubro()
+                p.getEmail(),
+                p.getTelefono()
         );
     }
 
+    // Ajustado para setear los campos reales en la entidad
     private Proveedor mapiarAEntidad(ProveedorDTO dto) {
         Proveedor entidad = new Proveedor();
-        entidad.setNombre(dto.getNombre());
+        entidad.setNombreEmpresa(dto.getNombreEmpresa());
         entidad.setContacto(dto.getContacto());
-        entidad.setRubro(dto.getRubro());
+        entidad.setEmail(dto.getEmail());
+        entidad.setTelefono(dto.getTelefono());
         return entidad;
     }
 

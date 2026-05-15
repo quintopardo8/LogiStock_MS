@@ -7,6 +7,8 @@ import java.util.Optional;
 
 @Repository
 public interface ProveedorRepository extends JpaRepository<Proveedor, Long> {
-    // Ejemplo de búsqueda personalizada:
-    Optional<Proveedor> findByRut(String rut);
+    
+    Optional<Proveedor> findByEmail(String email);
+
+    Optional<Proveedor> findByNombreEmpresa(String nombreEmpresa);
 }
