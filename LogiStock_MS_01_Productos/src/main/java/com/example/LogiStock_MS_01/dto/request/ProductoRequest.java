@@ -2,10 +2,12 @@ package com.example.LogiStock_MS_01.dto.request;
 
 import java.util.List;
 
+import com.example.LogiStock_MS_01.model.Categoria;
 import com.example.LogiStock_MS_01.model.Estado;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
@@ -29,7 +31,7 @@ public class ProductoRequest {
     @Min(value = 0, message = "El precio no puede ser negativo")
     private int precio;
 
-    // Recibimos solo los IDs de las categorías para asociarlas en el Service
-    private List<Long> categoriasIds;
+    @NotNull(message = "Categoria es obligatoria")
+    private List<Categoria> categorias;
 
 }
