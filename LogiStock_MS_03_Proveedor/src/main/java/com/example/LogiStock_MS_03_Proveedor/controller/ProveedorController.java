@@ -1,71 +1,58 @@
 package com.example.LogiStock_MS_03_Proveedor.controller;
 
-import com.example.LogiStock_MS_03_Proveedor.dto.ProveedorDTO;
-import com.example.LogiStock_MS_03_Proveedor.model.Proveedor;
-import com.example.LogiStock_MS_03_Proveedor.service.ProveedorService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.LogiStock_MS_03_Proveedor.dto.request.ProveedorRequest;
+import com.example.LogiStock_MS_03_Proveedor.dto.response.ProveedorResponse;
+import com.example.LogiStock_MS_03_Proveedor.service.IProveedorService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/proveedores")
-@CrossOrigin(origins = "*")
 public class ProveedorController {
 
-    @Autowired
-    private ProveedorService service;
+    private final IProveedorService service;
 
-    // Ajustado a los 5 campos del DTO nuevo
-    private ProveedorDTO mapiarADto(Proveedor p) {
-        return new ProveedorDTO(
-                p.getId(),
-                p.getNombreEmpresa(),
-                p.getContacto(),
-                p.getEmail(),
-                p.getTelefono()
-        );
+    // Inyección del servicio mediante el constructor
+    public ProveedorController(IProveedorService service) {
+        this.service = service;
     }
 
-    // Ajustado para setear los campos reales en la entidad
-    private Proveedor mapiarAEntidad(ProveedorDTO dto) {
-        Proveedor entidad = new Proveedor();
-        entidad.setNombreEmpresa(dto.getNombreEmpresa());
-        entidad.setContacto(dto.getContacto());
-        entidad.setEmail(dto.getEmail());
-        entidad.setTelefono(dto.getTelefono());
-        return entidad;
-    }
-
-    @GetMapping
-    public ResponseEntity<List<ProveedorDTO>> listar() {
-        List<ProveedorDTO> dtos = service.listarTodos()
-                .stream()
-                .map(this::mapiarADto)
-                .collect(Collectors.toList());
-        return ResponseEntity.ok(dtos);
-    }
-
+    // 1. Crear un nuevo proveedor
     @PostMapping
-    public ResponseEntity<ProveedorDTO> crear(@RequestBody ProveedorDTO dto) {
-        Proveedor entidad = mapiarAEntidad(dto);
-        Proveedor guardado = service.guardar(entidad);
-        return new ResponseEntity<>(mapiarADto(guardado), HttpStatus.CREATED);
+    public ResponseEntity<ProveedorResponse> crear(@Valid @RequestBody ProveedorRequest request) {
+        ProveedorResponse response = service.crearProveedor(request);
+        return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
 
+    // 2. Listar todos los proveedores
+    @GetMapping
+    public ResponseEntity<List<ProveedorResponse>> listar() {
+        List<ProveedorResponse> proveedores = service.listarProveedores();
+        return ResponseEntity.ok(proveedores);
+    }
+
+    // 3. Buscar un proveedor por su ID
     @GetMapping("/{id}")
-    public ResponseEntity<ProveedorDTO> obtener(@PathVariable Long id) {
-        return service.buscarPorId(id)
-                .map(p -> ResponseEntity.ok(mapiarADto(p)))
-                .orElse(ResponseEntity.notFound().build());
+    public ResponseEntity<ProveedorResponse> buscarPorId(@PathVariable Long id) {
+        ProveedorResponse response = service.buscarPorId(id);
+        return ResponseEntity.ok(response);
     }
 
+    // 4. Actualizar los datos de un proveedor
+    @PutMapping("/{id}")
+    public ResponseEntity<ProveedorResponse> actualizar(@PathVariable Long id, @Valid @RequestBody ProveedorRequest request) {
+        ProveedorResponse response = service.actualizarProveedor(id, request);
+        return ResponseEntity.ok(response);
+    }
+
+    // 5. Eliminar un proveedor (Desactivación lógica)
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
-        service.eliminar(id);
+        service.eliminarProveedor(id);
         return ResponseEntity.noContent().build();
     }
 }

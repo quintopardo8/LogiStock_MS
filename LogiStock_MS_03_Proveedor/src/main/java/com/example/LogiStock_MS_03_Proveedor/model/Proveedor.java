@@ -1,49 +1,45 @@
 package com.example.LogiStock_MS_03_Proveedor.model;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "PROVEEDORES")
+@Table(name = "proveedores")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Proveedor {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "NOMBRE_EMPRESA")
-    private String nombreEmpresa;
+    @Column(name = "rut", nullable = false, unique = true, length = 15)
+    private String rut;
 
-    @Column(name = "CONTACTO")
-    private String contacto;
+    @Column(name = "nombre", nullable = false, length = 100)
+    private String nombre;
 
-    @Column(name = "EMAIL")
-    private String email;
+    @Column(name = "contacto_telefono", nullable = false, length = 20)
+    private String contactoTelefono;
 
-    @Column(name = "TELEFONO")
-    private String telefono;
+    @Column(name = "contacto_email", nullable = false, length = 100)
+    private String contactoEmail;
 
-    public Proveedor() {}
+    @Column(name = "direccion", nullable = false, length = 200)
+    private String direccion;
 
-    // Constructor con parámetros actualizado
-    public Proveedor(Long id, String nombreEmpresa, String contacto, String email, String telefono) {
-        this.id = id;
-        this.nombreEmpresa = nombreEmpresa;
-        this.contacto = contacto;
-        this.email = email;
-        this.telefono = telefono;
-    }
+    @Enumerated(EnumType.STRING)
+    @Column(name = "estado", nullable = false)
+    private Estado estado;
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
-    public String getNombreEmpresa() { return nombreEmpresa; }
-    public void setNombreEmpresa(String nombreEmpresa) { this.nombreEmpresa = nombreEmpresa; }
-
-    public String getContacto() { return contacto; }
-    public void setContacto(String contacto) { this.contacto = contacto; }
-
-    public String getEmail() { return email; }
-    public void setEmail(String email) { this.email = email; }
-
-    public String getTelefono() { return telefono; }
-    public void setTelefono(String telefono) { this.telefono = telefono; }
 }
