@@ -1,0 +1,36 @@
+2026-05-17T19:38:58.068-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 18887 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS)
+2026-05-17T19:38:58.078-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-17T19:38:59.944-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-17T19:39:00.133-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 156 ms. Found 2 JPA repository interfaces.
+2026-05-17T19:39:01.332-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-05-17T19:39:01.373-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-17T19:39:01.374-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-17T19:39:01.494-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3254 ms
+2026-05-17T19:39:02.546-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-17T19:39:03.403-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65844c96
+2026-05-17T19:39:03.408-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-17T19:39:03.540-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock (MySQL 8.0)
+2026-05-17T19:39:03.751-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.105s)
+2026-05-17T19:39:03.809-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock`: 4
+2026-05-17T19:39:03.821-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Schema `logiStock` is up to date. No migration necessary.
+2026-05-17T19:39:04.119-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-17T19:39:04.282-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-17T19:39:05.521-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-17T19:39:05.704-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-17T19:39:07.355-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-17T19:39:07.448-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-17T19:39:07.629-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-17T19:39:08.063-04:00  WARN 18887 --- [LogiStock_MS_01_Productos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-17T19:39:08.932-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-05-17T19:39:08.952-04:00  INFO 18887 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Started LogiStockMs01Application in 12.2 seconds (process running for 13.309)

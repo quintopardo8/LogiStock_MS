@@ -12,7 +12,9 @@ import com.example.LogiStock_MS_01.model.Categoria;
 import com.example.LogiStock_MS_01.repository.CategoriaRepository;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j //Para probar la alternativa a declararlo
 @Service
 @RequiredArgsConstructor
 public class CategoriaService {
@@ -34,6 +36,7 @@ public class CategoriaService {
     }
 
     public CategoriaResponse guardarCategoria(CategoriaRequest categoriaRequest) {
+        log.info("Datos de la categoría al momento de crear {}",categoriaRequest);
         return categoriaMapper.toResponse(categoriaRepository.save(categoriaMapper.toEntity(categoriaRequest)));
     }
 

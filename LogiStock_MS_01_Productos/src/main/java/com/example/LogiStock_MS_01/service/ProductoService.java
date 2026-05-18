@@ -2,6 +2,8 @@ package com.example.LogiStock_MS_01.service;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import com.example.LogiStock_MS_01.dto.request.ProductoRequest;
@@ -19,6 +21,7 @@ public class ProductoService {
 
     private final ProductoRepository productoRepository;
     private final ProductoMapper productoMapper;
+    private static final Logger log = LoggerFactory.getLogger(ProductoService.class);
 
 
     public List<ProductoResponse> obtenerTodosLosProductos() {
@@ -27,6 +30,7 @@ public class ProductoService {
     }
 
     public ProductoResponse obtenerPorId(Long id) {
+        log.info("Se está obteniendo una película con el id {}",id);
         return  productoMapper.toResponse(productoRepository
                 .findById(id)
                 .orElseThrow(()-> new ProductoNoEncontradoException(id)));        
