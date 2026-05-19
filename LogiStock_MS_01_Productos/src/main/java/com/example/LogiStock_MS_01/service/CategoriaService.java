@@ -14,7 +14,7 @@ import com.example.LogiStock_MS_01.repository.CategoriaRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j //Para probar la alternativa a declararlo
+@Slf4j //Para probar la alternativa a declarar logger.
 @Service
 @RequiredArgsConstructor
 public class CategoriaService {

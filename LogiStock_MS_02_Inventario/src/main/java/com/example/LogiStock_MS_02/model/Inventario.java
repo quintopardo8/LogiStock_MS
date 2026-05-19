@@ -24,6 +24,9 @@ public class Inventario {
     @Column(name = "productoID", nullable = false)
     private Long productoId;
 
+    @Column(name ="cantidad_disponible", nullable = false)
+    private int cantidadDisponible;
+
     @Column(name = "cantidad_reservada", nullable = false)
     private int cantidadReservada;
 
