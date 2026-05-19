@@ -38,7 +38,7 @@ public class InventarioService {
     public InventarioResponse obtenerPorProductoId(Long prodId) {
         log.info("Buscando inventario del producto con id {}", prodId);
         return inventarioMapper.toResponse(inventarioRepository
-                .findById(prodId)
+                .findByProductoId(prodId) //Método creado en repository.
                 .orElseThrow(() -> new InventarioNoEncontradoException("No existe inventario para el producto de ID: " + prodId)));
     }
 

@@ -1,0 +1,48 @@
+2026-05-19T18:52:00.716-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.10 with PID 52260 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS)
+2026-05-19T18:52:00.730-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-19T18:52:02.729-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-19T18:52:02.874-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interface.
+2026-05-19T18:52:04.044-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-19T18:52:04.079-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-19T18:52:04.080-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-19T18:52:04.194-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3261 ms
+2026-05-19T18:52:05.136-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-19T18:52:05.848-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b7d2d51
+2026-05-19T18:52:05.852-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-19T18:52:05.975-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock (MySQL 8.0)
+2026-05-19T18:52:06.155-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.094s)
+2026-05-19T18:52:06.229-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock`: 4
+2026-05-19T18:52:06.230-04:00 ERROR 52260 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Schema `logiStock` has version 4, but no migration could be resolved in the configured locations !
+2026-05-19T18:52:06.242-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Schema `logiStock` is up to date. No migration necessary.
+2026-05-19T18:52:06.542-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-19T18:52:06.680-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-19T18:52:07.541-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-19T18:52:07.700-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-19T18:52:09.061-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-19T18:52:09.196-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-19T18:52:09.395-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-19T18:52:09.756-04:00  WARN 52260 --- [LogiStock_MS_02_Inventario] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-19T18:52:10.563-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-05-19T18:52:10.578-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Started LogiStockMs02Application in 11.188 seconds (process running for 12.171)
+2026-05-19T18:53:25.058-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-19T18:53:25.059-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-19T18:53:25.063-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-19T18:53:39.047-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-3] c.e.L.service.InventarioService          : Creando registro de inventario para producto ID: 1
+2026-05-19T18:54:20.758-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-5] c.e.L.service.InventarioService          : Buscando inventario del producto con id 1
+2026-05-19T18:54:43.537-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-7] c.e.L.service.InventarioService          : Buscando registro de inventario con id 1
+2026-05-19T18:59:26.954-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-19T18:59:26.958-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-19T18:59:26.965-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-19T18:59:26.969-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-19T18:59:26.986-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
