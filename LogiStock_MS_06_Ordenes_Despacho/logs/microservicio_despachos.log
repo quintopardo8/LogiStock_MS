@@ -372,3 +372,87 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 2026-05-20 13:57:41 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-05-20 13:57:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2026-05-20 13:57:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-20 14:10:28 [main] INFO  c.e.L.LogiStockMs06OrdenesDespachoApplication - Starting LogiStockMs06OrdenesDespachoApplication using Java 21.0.8 with PID 44352 (C:\Users\pinom\OneDrive\Desktop\microservicios\LogiStock_MS_06_Ordenes_Despacho\target\classes started by pinom in C:\Users\pinom\OneDrive\Desktop\microservicios\LogiStock_MS_06_Ordenes_Despacho)
+2026-05-20 14:10:28 [main] DEBUG c.e.L.LogiStockMs06OrdenesDespachoApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-05-20 14:10:28 [main] INFO  c.e.L.LogiStockMs06OrdenesDespachoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-20 14:10:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20 14:10:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interface.
+2026-05-20 14:10:29 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=3a5c1125-6cbf-3d16-8771-33ca0f6ee45e
+2026-05-20 14:10:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
+2026-05-20 14:10:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-20 14:10:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-05-20 14:10:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-20 14:10:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 915 ms
+2026-05-20 14:10:29 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-20 14:10:29 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-05-20 14:10:29 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-20 14:10:29 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-20 14:10:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-20 14:10:29 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@429e7914
+2026-05-20 14:10:29 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-20 14:10:29 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-20 14:10:29 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-20 14:10:30 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-20 14:10:30 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20 14:10:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-20 14:10:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8086 (http) with context path '/'
+2026-05-20 14:10:31 [main] INFO  c.e.L.LogiStockMs06OrdenesDespachoApplication - Started LogiStockMs06OrdenesDespachoApplication in 3.352 seconds (process running for 3.706)
+2026-05-20 14:11:57 [http-nio-8086-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-20 14:11:57 [http-nio-8086-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-20 14:11:57 [http-nio-8086-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2026-05-20 14:19:28 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-20 14:19:28 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-20 14:19:28 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20 14:19:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-20 14:19:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-05-20 14:33:40 [main] INFO  c.e.L.LogiStockMs06OrdenesDespachoApplication - Starting LogiStockMs06OrdenesDespachoApplication using Java 21.0.8 with PID 2720 (C:\Users\pinom\OneDrive\Desktop\microservicios\LogiStock_MS_06_Ordenes_Despacho\target\classes started by pinom in C:\Users\pinom\OneDrive\Desktop\microservicios\LogiStock_MS_06_Ordenes_Despacho)
+2026-05-20 14:33:40 [main] DEBUG c.e.L.LogiStockMs06OrdenesDespachoApplication - Running with Spring Boot v3.4.3, Spring v6.2.3
+2026-05-20 14:33:40 [main] INFO  c.e.L.LogiStockMs06OrdenesDespachoApplication - No active profile set, falling back to 1 default profile: "default"
+2026-05-20 14:33:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20 14:33:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interface.
+2026-05-20 14:33:41 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=3a5c1125-6cbf-3d16-8771-33ca0f6ee45e
+2026-05-20 14:33:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8086 (http)
+2026-05-20 14:33:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-05-20 14:33:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-05-20 14:33:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-05-20 14:33:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 928 ms
+2026-05-20 14:33:42 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-20 14:33:42 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-05-20 14:33:42 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2026-05-20 14:33:42 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-20 14:33:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-05-20 14:33:42 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7ff09659
+2026-05-20 14:33:42 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-05-20 14:33:42 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-20 14:33:42 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.46
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-20 14:33:43 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-20 14:33:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20 14:33:44 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-20 14:33:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8086 (http) with context path '/'
+2026-05-20 14:33:44 [main] INFO  c.e.L.LogiStockMs06OrdenesDespachoApplication - Started LogiStockMs06OrdenesDespachoApplication in 4.155 seconds (process running for 4.502)
+2026-05-20 14:34:19 [http-nio-8086-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-20 14:34:19 [http-nio-8086-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-05-20 14:34:19 [http-nio-8086-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2026-05-20 14:34:19 [http-nio-8086-exec-2] INFO  c.e.L.s.OrdenDespachoServiceImpl - Llamando al MS Clientes para verificar ID: 9999
+2026-05-20 14:34:19 [http-nio-8086-exec-2] ERROR c.e.L.s.OrdenDespachoServiceImpl - Error en validación cruzada: [404] during [GET] to [http://localhost:8084/api/clientes/9999] [ClienteClient#obtenerClientePorId(Long)]: [{"error":"Cliente no encontrado con ID: 9999"}]
+2026-05-20 14:37:48 [http-nio-8086-exec-8] INFO  c.e.L.s.OrdenDespachoServiceImpl - Llamando al MS Clientes para verificar ID: 1
+2026-05-20 14:37:48 [http-nio-8086-exec-8] INFO  c.e.L.s.OrdenDespachoServiceImpl - Validación exitosa con MS Clientes.
+2026-05-20 14:42:47 [SpringApplicationShutdownHook] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-20 14:42:47 [tomcat-shutdown] INFO  o.s.b.w.e.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-05-20 14:42:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20 14:42:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-05-20 14:42:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

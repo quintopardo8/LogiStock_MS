@@ -17,22 +17,23 @@ public class OrdenDespacho {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 50)
+    @Column(name = "numero_seguimiento", nullable = false, unique = true, length = 50)
     private String numeroSeguimiento; // Código único de rastreo (ej: DESP-10024)
 
-    @Column(nullable = false)
+    @Column(name = "cliente_id", nullable = false)
     private Long clienteId; 
 
-    @Column(nullable = false, length = 255)
+    @Column(name = "direccion_despacho", nullable = false, length = 255)
     private String direccionDespacho;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private EstadoDespacho estado;
 
-    @Column(nullable = false)
+    @Column(name = "fecha_creacion", nullable = false)
     private LocalDateTime fechaCreacion;
 
+    @Column(name = "fecha_envio")
     private LocalDateTime fechaEnvio;
 
     @PrePersist

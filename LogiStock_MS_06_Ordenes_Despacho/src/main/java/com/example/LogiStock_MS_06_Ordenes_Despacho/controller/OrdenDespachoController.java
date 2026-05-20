@@ -20,7 +20,7 @@ public class OrdenDespachoController {
     private final IOrdenDespachoService service;
 
     @PostMapping
-    public ResponseEntity<OrdenDespachoResponse> crear(@Valid @RequestBody OrdenDespachoRequest request) {
+    public ResponseEntity<OrdenDespachoResponse> crearOrden(@Valid @RequestBody OrdenDespachoRequest request) {
         return new ResponseEntity<>(service.crearOrden(request), HttpStatus.CREATED);
     }
 
