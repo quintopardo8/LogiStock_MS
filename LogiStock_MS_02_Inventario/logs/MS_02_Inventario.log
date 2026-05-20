@@ -46,3 +46,102 @@
 2026-05-19T18:59:26.965-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-05-19T18:59:26.969-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-05-19T18:59:26.986-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-20T15:33:42.774-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.10 with PID 53924 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS)
+2026-05-20T15:33:42.782-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-20T15:33:44.778-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20T15:33:44.981-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170 ms. Found 1 JPA repository interface.
+2026-05-20T15:33:46.179-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-20T15:33:46.215-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-20T15:33:46.216-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-20T15:33:46.330-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3388 ms
+2026-05-20T15:33:47.419-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-20T15:33:48.189-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c212536
+2026-05-20T15:33:48.194-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-20T15:33:48.331-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock (MySQL 8.0)
+2026-05-20T15:33:48.484-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock`.`flyway_schema_history` does not exist yet
+2026-05-20T15:33:48.494-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.071s)
+2026-05-20T15:33:48.610-04:00  WARN 53924 --- [LogiStock_MS_02_Inventario] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Found non-empty schema(s) `logiStock` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+2026-05-20T15:33:48.612-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-20T15:33:48.690-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-20T15:33:48.699-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-20T15:33:48.716-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-20T15:33:48.749-04:00 ERROR 53924 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Found non-empty schema(s) `logiStock` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_02.LogiStockMs02Application.main(LogiStockMs02Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Found non-empty schema(s) `logiStock` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.FlywayException: Found non-empty schema(s) `logiStock` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:235) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.6.jar:4.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 17 common frames omitted
+
+2026-05-20T15:39:23.576-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.10 with PID 55843 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS)
+2026-05-20T15:39:23.582-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-20T15:39:25.240-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20T15:39:25.390-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 1 JPA repository interface.
+2026-05-20T15:39:26.708-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-20T15:39:26.758-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-20T15:39:26.759-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-20T15:39:26.905-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3186 ms
+2026-05-20T15:39:27.868-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-20T15:39:28.629-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c212536
+2026-05-20T15:39:28.632-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-20T15:39:28.768-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_02 (MySQL 8.0)
+2026-05-20T15:39:28.899-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock_MS_02`.`flyway_schema_history` does not exist yet
+2026-05-20T15:39:28.906-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.064s)
+2026-05-20T15:39:28.968-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `logiStock_MS_02`.`flyway_schema_history` ...
+2026-05-20T15:39:29.129-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock_MS_02`: << Empty Schema >>
+2026-05-20T15:39:29.158-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "1 - crear tablas"
+2026-05-20T15:39:29.296-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "2 - insertar inventarios"
+2026-05-20T15:39:29.380-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema `logiStock_MS_02`, now at version v2 (execution time 00:00.060s)
+2026-05-20T15:39:29.640-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-20T15:39:29.771-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-20T15:39:30.697-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-20T15:39:30.854-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_02]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock_MS_02/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-20T15:39:32.204-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-20T15:39:32.300-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T15:39:32.480-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-20T15:39:32.905-04:00  WARN 55843 --- [LogiStock_MS_02_Inventario] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-20T15:39:33.640-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-05-20T15:39:33.652-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Started LogiStockMs02Application in 11.217 seconds (process running for 12.45)
+2026-05-20T15:40:59.238-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-20T15:40:59.247-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-20T15:40:59.256-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T15:40:59.264-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-20T15:40:59.312-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
