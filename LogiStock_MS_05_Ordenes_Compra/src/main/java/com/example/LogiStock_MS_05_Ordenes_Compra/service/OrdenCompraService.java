@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.example.LogiStock_MS_05_Ordenes_Compra.dto.request.MovimientoStockRequest;
 import com.example.LogiStock_MS_05_Ordenes_Compra.dto.request.OrdenCompraRequest;
 import com.example.LogiStock_MS_05_Ordenes_Compra.dto.response.OrdenCompraResponse;
 import com.example.LogiStock_MS_05_Ordenes_Compra.exception.OrdenNoEncontradaException;
@@ -25,6 +26,7 @@ public class OrdenCompraService {
 
     private final OrdenCompraRepository ordenCompraRepository;
     private final OrdenCompraMapper ordenCompraMapper;
+    private final com.example.LogiStock_MS_05_Ordenes_Compra.client.InventarioClient inventarioClient;
 
     public List<OrdenCompraResponse> obtenerTodas() {
         log.info("Consultando todas las órdenes de compra");
@@ -100,13 +102,26 @@ public class OrdenCompraService {
         orden.setEstado(EstadoCompra.RECIBIDA);
         orden.setFechaRecepcion(java.time.LocalDateTime.now());
 
+        // 
+
         for (DetalleOrden detalle : orden.getDetalles()) {
             detalle.setCantidadRecibida(detalle.getCantidadSolicitada());
-            log.info("Producto ID: {} - Registradas {} unidades como recibidas", detalle.getProductoId(), detalle.getCantidadSolicitada());
+
+            log.info("POST a MS02 para Producto ID: {}, Incremento: {}", detalle.getProductoId(), detalle.getCantidadSolicitada());
+            
+            MovimientoStockRequest remotaRequest = new MovimientoStockRequest(detalle.getCantidadSolicitada());
+            
+            try {
+                // Enviamos el objeto tipado a través del cliente Feign
+                inventarioClient.incrementarStock(detalle.getProductoId(), remotaRequest);
+                log.info("Stock modificado en MS02");
+                
+            } catch (Exception e) {
+                log.error("Error en la conexión con MS02. Mensaje: {}", e.getMessage());
+                throw new RuntimeException("Error en la sincronización de inventario. Operación abortada.");
+            }
         }
-        
-        // Llamada a MS02
-        // Por cada detalle de la orden: ms02Client.incrementarStock(detalle.getProductoId(), detalle.getCantidad());
+       
         log.info("Orden de compra ID: {} marcada exitosamente como RECIBIDA.", id);
 
         return ordenCompraMapper.toResponse(ordenCompraRepository.save(orden));

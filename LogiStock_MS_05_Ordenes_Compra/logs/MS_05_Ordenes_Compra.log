@@ -169,3 +169,49 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2026-05-20T15:47:36.516-04:00  INFO 57838 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-05-20T15:47:36.525-04:00  INFO 57838 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-05-20T15:47:36.559-04:00  INFO 57838 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-20T15:50:41.799-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] .L.LogiStockMs05OrdenesCompraApplication : Starting LogiStockMs05OrdenesCompraApplication using Java 21.0.10 with PID 60176 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_05_Ordenes_Compra/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS)
+2026-05-20T15:50:41.816-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] .L.LogiStockMs05OrdenesCompraApplication : No active profile set, falling back to 1 default profile: "default"
+2026-05-20T15:50:43.600-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20T15:50:43.762-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 2 JPA repository interfaces.
+2026-05-20T15:50:44.900-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8085 (http)
+2026-05-20T15:50:44.937-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-20T15:50:44.938-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-20T15:50:45.063-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3078 ms
+2026-05-20T15:50:45.596-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-20T15:50:45.847-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-20T15:50:47.194-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-20T15:50:47.273-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-20T15:50:48.132-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@152891f8
+2026-05-20T15:50:48.135-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-20T15:50:48.440-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_05]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock_MS_05/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-20T15:50:50.425-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-20T15:50:50.615-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T15:50:50.783-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-20T15:50:51.124-04:00  WARN 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-20T15:50:52.163-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8085 (http) with context path '/'
+2026-05-20T15:50:52.190-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [main] .L.LogiStockMs05OrdenesCompraApplication : Started LogiStockMs05OrdenesCompraApplication in 11.667 seconds (process running for 12.666)
+2026-05-20T15:51:04.093-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-20T15:51:04.094-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-20T15:51:04.098-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-20T15:51:04.568-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-2] c.e.L.service.OrdenCompraService         : Creando nueva orden de compra para el proveedor: 99
+2026-05-20T15:51:51.701-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-3] c.e.L.service.OrdenCompraService         : Iniciando recepción de orden de compra ID: 1
+2026-05-20T15:51:51.828-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-3] c.e.L.service.OrdenCompraService         : Producto ID: 1 - Registradas 50 unidades como recibidas
+2026-05-20T15:51:51.829-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-3] c.e.L.service.OrdenCompraService         : Orden de compra ID: 1 marcada exitosamente como RECIBIDA.
+2026-05-20T15:55:40.166-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : Iniciando recepción de orden de compra ID: 1
+2026-05-20T15:55:40.178-04:00  WARN 60176 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : La orden de compra ID: 1 ya fue procesada y recibida previamente.
+2026-05-20T15:56:02.254-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-20T15:56:02.260-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-20T15:56:02.269-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T15:56:02.273-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-20T15:56:02.290-04:00  INFO 60176 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
