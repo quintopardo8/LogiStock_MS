@@ -55,4 +55,9 @@ public class OrdenCompraController {
         return ResponseEntity.noContent().build();
     }
 
+    @PutMapping("/{id}/recibir")
+    public ResponseEntity<OrdenCompraResponse> recibirOrden(@PathVariable Long id) {
+        return ResponseEntity.ok().body(ordenCompraService.recibirOrdenDeCompra(id));
+}
+
 }

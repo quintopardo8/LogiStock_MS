@@ -80,6 +80,30 @@ public class OrdenCompraService {
         return ordenCompraMapper.toResponse(ordenCompraRepository.save(ordenExistente));
     }
 
-    
+    public OrdenCompraResponse recibirOrdenDeCompra(Long id) {
+        log.info("Iniciando recepción de orden de compra ID: {}", id);
+        
+        OrdenCompra orden = ordenCompraRepository
+                .findById(id)
+                .orElseThrow(() -> new OrdenNoEncontradaException(id));
+
+        if (orden.getEstado() == EstadoCompra.RECIBIDA) {
+            log.warn("La orden de compra ID: {} ya fue procesada y recibida previamente.", id);
+            throw new OrdenYaRecibidaException(id);
+        }
+
+        if (orden.getDetalles() == null || orden.getDetalles().isEmpty()) {
+            log.error("Intento de recibir orden ID: {} sin detalles de productos", id);
+            throw new OrdenNoEncontradaException(id);
+        }
+
+        orden.setEstado(EstadoCompra.RECIBIDA);
+        
+        // Llamada a MS02
+        // Por cada detalle de la orden: ms02Client.incrementarStock(detalle.getProductoId(), detalle.getCantidad());
+        log.info("Orden de compra ID: {} marcada exitosamente como RECIBIDA.", id);
+
+        return ordenCompraMapper.toResponse(ordenCompraRepository.save(orden));
+    }
 
 }

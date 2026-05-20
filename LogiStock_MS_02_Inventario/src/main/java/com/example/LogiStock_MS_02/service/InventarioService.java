@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import com.example.LogiStock_MS_02.dto.InventarioRequest;
 import com.example.LogiStock_MS_02.dto.InventarioResponse;
 import com.example.LogiStock_MS_02.exception.InventarioNoEncontradoException;
+import com.example.LogiStock_MS_02.exception.StockInsuficienteException;
 import com.example.LogiStock_MS_02.mapper.InventarioMapper;
 import com.example.LogiStock_MS_02.model.Inventario;
 import com.example.LogiStock_MS_02.repository.InventarioRepository;
@@ -65,6 +66,48 @@ public class InventarioService {
         return inventarioMapper.toResponse(inventarioRepository.save(inventarioExistente));
     }
 
+    public InventarioResponse reservarStock(Long productoId, int cantidad) {
+        log.info("Intentando reservar {} unidades para el producto ID: {}", cantidad, productoId);
+        
+        Inventario inventario = inventarioRepository
+                .findByProductoId(productoId)
+                .orElseThrow(() -> new InventarioNoEncontradoException("No existe registro de inventario para el producto ID: " + productoId));
+
+        if (inventario.getCantidadDisponible() < cantidad) {
+            log.error("Quiebre de stock detectado para producto ID: {}. Solicitado: {}, Disponible: {}", productoId, cantidad, inventario.getCantidadDisponible());
+            throw new StockInsuficienteException("Stock insuficiente para realizar la reserva. Disponible: " + inventario.getCantidadDisponible());
+        }
+
+        inventario.setCantidadDisponible(inventario.getCantidadDisponible() - cantidad);
+        inventario.setCantidadReservada(inventario.getCantidadReservada() + cantidad);
+
+        if (inventario.getCantidadDisponible() <= inventario.getStockMinimo()) {
+            log.warn("El producto ID: {} ha alcanzado o caído bajo el stock mínimo ({} unidades restantes)", productoId, inventario.getCantidadDisponible());
+        }
+
+        return inventarioMapper.toResponse(inventarioRepository.save(inventario));
+    }
+
+    
+    public InventarioResponse incrementarStock(Long productoId, int cantidad) {
+        log.info("Incrementando inventario físico por recepción. Producto ID: {}, Cantidad: {}", productoId, cantidad);
+        
+        // Si el inventario no existe para ese producto, se inicializa automáticamente en lugar de fallar
+        Inventario inventario = inventarioRepository.findByProductoId(productoId)
+                .orElseGet(() -> {
+                    log.info("No se encontró registro previo de inventario para producto ID: {}. Creando registro base.", productoId);
+                    Inventario nuevoInventario = new Inventario();
+                    nuevoInventario.setProductoId(productoId);
+                    nuevoInventario.setCantidadDisponible(0);
+                    nuevoInventario.setCantidadReservada(0);
+                    nuevoInventario.setStockMinimo(5);
+                    nuevoInventario.setUbicacion("BODEGA");
+                    return nuevoInventario;
+                });
+
+        inventario.setCantidadDisponible(inventario.getCantidadDisponible() + cantidad);
+        return inventarioMapper.toResponse(inventarioRepository.save(inventario));
+    }
     
 
 }
