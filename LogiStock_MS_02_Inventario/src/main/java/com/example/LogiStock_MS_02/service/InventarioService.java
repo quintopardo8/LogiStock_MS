@@ -49,8 +49,13 @@ public class InventarioService {
     }
 
     public void eliminarInventario(Long id){
-        inventarioRepository.deleteById(id);
-    }
+    log.info("Petición de eliminación para registro de inventario ID: {}", id);
+    Inventario inventario = inventarioRepository
+        .findById(id)
+        .orElseThrow(() -> new InventarioNoEncontradoException("No existe registro de inventario con ID: " + id));
+    inventarioRepository.delete(inventario);
+    log.info("Registro de inventario ID: {} removido con éxito", id);
+}
 
     public InventarioResponse actualizarInventario(Long id, InventarioRequest request){
         Inventario inventarioExistente = inventarioRepository

@@ -98,6 +98,12 @@ public class OrdenCompraService {
         }
 
         orden.setEstado(EstadoCompra.RECIBIDA);
+        orden.setFechaRecepcion(java.time.LocalDateTime.now());
+
+        for (DetalleOrden detalle : orden.getDetalles()) {
+            detalle.setCantidadRecibida(detalle.getCantidadSolicitada());
+            log.info("Producto ID: {} - Registradas {} unidades como recibidas", detalle.getProductoId(), detalle.getCantidadSolicitada());
+        }
         
         // Llamada a MS02
         // Por cada detalle de la orden: ms02Client.incrementarStock(detalle.getProductoId(), detalle.getCantidad());

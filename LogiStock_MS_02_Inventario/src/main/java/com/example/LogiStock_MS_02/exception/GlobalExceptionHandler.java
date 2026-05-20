@@ -29,4 +29,26 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(StockInsuficienteException.class)
+    public ResponseEntity<?> handleStockInsuficiente(StockInsuficienteException ex) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("timestamp", LocalDateTime.now());
+        response.put("status", 400);
+        response.put("error", "Operación Inválida");
+        response.put("mensaje", ex.getMessage());
+
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(InventarioNoEncontradoException.class)
+    public ResponseEntity<?> handleInventarioNoEncontrado(InventarioNoEncontradoException ex) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("timestamp", LocalDateTime.now());
+        response.put("status", 404);
+        response.put("error", "No Encontrado");
+        response.put("mensaje", ex.getMessage());
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
 }

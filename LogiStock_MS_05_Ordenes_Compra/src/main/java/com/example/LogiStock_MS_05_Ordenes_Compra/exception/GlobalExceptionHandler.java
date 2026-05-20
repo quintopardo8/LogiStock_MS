@@ -29,4 +29,26 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(OrdenNoEncontradaException.class)
+    public ResponseEntity<?> handleOrdenNoEncontrada(OrdenNoEncontradaException ex) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("timestamp", LocalDateTime.now());
+        response.put("status", 404);
+        response.put("error", "No Encontrado");
+        response.put("mensaje", ex.getMessage());
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(OrdenYaRecibidaException.class)
+    public ResponseEntity<?> handleOrdenYaRecibida(OrdenYaRecibidaException ex) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("timestamp", LocalDateTime.now());
+        response.put("status", 400);
+        response.put("error", "Operación Inválida");
+        response.put("mensaje", ex.getMessage());
+
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
 }

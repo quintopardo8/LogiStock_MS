@@ -41,8 +41,14 @@ public class CategoriaService {
     }
 
     public void eliminarCategoria(Long id) {
-        categoriaRepository.deleteById(id);
-    }
+    log.info("Petición de eliminación para categoría ID: {}", id);
+    Categoria categoria = categoriaRepository
+            .findById(id)
+            .orElseThrow(() -> new CategoriaNoEncontradaException(id));
+    
+    categoriaRepository.delete(categoria);
+    log.info("Categoría con ID: {} eliminada exitosamente", id);
+}
 
     public CategoriaResponse actualizarCategoria(Long id, CategoriaRequest categoriaRequest) {
     Categoria categoriaExistente = categoriaRepository

@@ -29,4 +29,15 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(ProductoNoEncontradoException.class)
+    public ResponseEntity<?> handleProductoNoEncontrado(ProductoNoEncontradoException ex) {
+        
+        Map<String, Object> response = new HashMap<>();
+        response.put("timestamp", LocalDateTime.now());
+        response.put("status", 404);
+        response.put("error", ex.getMessage()); // Muestra tu mensaje personalizado
+
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+    }
 }

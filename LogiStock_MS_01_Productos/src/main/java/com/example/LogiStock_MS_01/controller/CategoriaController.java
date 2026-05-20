@@ -2,7 +2,6 @@ package com.example.LogiStock_MS_01.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -19,13 +18,14 @@ import com.example.LogiStock_MS_01.dto.response.CategoriaResponse;
 import com.example.LogiStock_MS_01.service.CategoriaService;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/v1/categorias")
+@RequiredArgsConstructor
 public class CategoriaController {
 
-    @Autowired
-    private CategoriaService categoriaService;
+    private final CategoriaService categoriaService;
 
     @PostMapping
     public ResponseEntity<CategoriaResponse> crearCategoria(@Valid @RequestBody CategoriaRequest requestCategoria) {
