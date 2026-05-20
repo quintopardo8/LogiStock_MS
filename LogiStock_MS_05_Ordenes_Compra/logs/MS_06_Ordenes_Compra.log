@@ -192,3 +192,8 @@ Consider defining a bean of type 'com.example.LogiStock_MS_05_Ordenes_Compra.map
 2026-05-20T00:58:43.603-04:00  INFO 62372 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-1] c.e.L.service.OrdenCompraService         : Consultando todas las órdenes de compra
 2026-05-20T01:00:21.872-04:00  INFO 62372 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-5] c.e.L.service.OrdenCompraService         : Creando nueva orden de compra para el proveedor: 1
 2026-05-20T01:01:19.659-04:00  INFO 62372 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : Consultando todas las órdenes de compra
+2026-05-20T01:06:29.860-04:00  INFO 62372 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-20T01:06:29.864-04:00  INFO 62372 --- [LogiStock_MS_05_Ordenes_Compra] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-20T01:06:29.874-04:00  INFO 62372 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T01:06:29.880-04:00  INFO 62372 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-20T01:06:29.898-04:00  INFO 62372 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
