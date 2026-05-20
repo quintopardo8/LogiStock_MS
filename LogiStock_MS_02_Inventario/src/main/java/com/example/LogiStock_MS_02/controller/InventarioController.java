@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.LogiStock_MS_02.dto.InventarioRequest;
 import com.example.LogiStock_MS_02.dto.InventarioResponse;
+import com.example.LogiStock_MS_02.dto.MovimientoStockRequest;
 import com.example.LogiStock_MS_02.service.InventarioService;
 
 import jakarta.validation.Valid;
@@ -57,5 +58,16 @@ public class InventarioController {
     public ResponseEntity<Void> eliminarInventario(@PathVariable Long id) {
         inventarioService.eliminarInventario(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PostMapping("/producto/{prodId}/reservar")
+    public ResponseEntity<InventarioResponse> reservarStock(@PathVariable Long prodId, @Valid @RequestBody MovimientoStockRequest request) {
+        return ResponseEntity.ok().body(inventarioService.reservarStock(prodId, request.getCantidad()));
+    }
+
+    @PostMapping("/producto/{prodId}/incrementar")
+    public ResponseEntity<InventarioResponse> incrementarStock(@PathVariable Long prodId, @Valid @RequestBody MovimientoStockRequest request) {
+        
+        return ResponseEntity.ok().body(inventarioService.incrementarStock(prodId, request.getCantidad()));
     }
 }
