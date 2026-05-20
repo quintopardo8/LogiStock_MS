@@ -2,7 +2,6 @@ package com.example.LogiStock_MS_01.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,18 +13,20 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.LogiStock_MS_01.dto.request.ActualizarEstadoRequest;
 import com.example.LogiStock_MS_01.dto.request.ProductoRequest;
 import com.example.LogiStock_MS_01.dto.response.ProductoResponse;
 import com.example.LogiStock_MS_01.service.ProductoService;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("/api/v1/productos")
+@RequiredArgsConstructor
 public class ProductoController {
 
-    @Autowired
-    private ProductoService productoService;
+    private final ProductoService productoService;
 
     @PostMapping
     public ResponseEntity<ProductoResponse> crearProducto(@Valid @RequestBody ProductoRequest prodRequest) {
@@ -52,4 +53,11 @@ public class ProductoController {
         productoService.eliminarProducto(id);
         return ResponseEntity.noContent().build();
     }
+
+    @PutMapping("/{id}/estado")
+    public ResponseEntity<ProductoResponse> actualizarEstado(@PathVariable Long id, @Valid @RequestBody ActualizarEstadoRequest actualizarEstadoRequest) {
+    
+    ProductoResponse prodResponse = productoService.cambiarEstadoProducto(id, actualizarEstadoRequest);
+    return ResponseEntity.ok(prodResponse);
+}
 }
