@@ -7,6 +7,6 @@ import java.util.Optional;
 
 @Repository
 public interface ProveedorRepository extends JpaRepository<Proveedor, Long> {
-    // Este método nos servirá más adelante para verificar si un RUT ya existe antes de registrarlo
+    
     Optional<Proveedor> findByRut(String rut);
 }
