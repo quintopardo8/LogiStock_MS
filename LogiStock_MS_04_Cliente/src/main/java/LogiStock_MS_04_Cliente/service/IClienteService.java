@@ -5,7 +5,6 @@ import LogiStock_MS_04_Cliente.dto.request.ClienteRequest;
 import LogiStock_MS_04_Cliente.dto.response.ClienteResponse;
 
 public interface IClienteService {
-    // Sincronizado perfectamente con ClienteServiceImpl y ClienteController
     List<ClienteResponse> obtenerTodosLosClientes();
     ClienteResponse obtenerClientePorId(Long id);
     ClienteResponse guardarCliente(ClienteRequest request);

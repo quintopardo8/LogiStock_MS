@@ -7,6 +7,7 @@ import lombok.Data;
 
 @Data
 public class ClienteRequest {
+
     @NotBlank(message = "El rut es obligatorio")
     @Size(max = 15, message = "El rut no puede tener más de 15 caracteres")
     private String rut;

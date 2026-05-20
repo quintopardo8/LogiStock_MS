@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 import LogiStock_MS_04_Cliente.dto.request.ClienteRequest;
 import LogiStock_MS_04_Cliente.dto.response.ClienteResponse;
 import LogiStock_MS_04_Cliente.exception.ClienteNoEncontradoException;
+import LogiStock_MS_04_Cliente.exception.RutDuplicadoException;
 import LogiStock_MS_04_Cliente.mapper.ClienteMapper;
 import LogiStock_MS_04_Cliente.model.Cliente;
 import LogiStock_MS_04_Cliente.model.Estado;
@@ -39,7 +40,7 @@ public class ClienteServiceImpl implements IClienteService {
     @Transactional
     public ClienteResponse guardarCliente(ClienteRequest request) {
         if (clienteRepository.existsByRut(request.getRut())) {
-            throw new RuntimeException("El RUT '" + request.getRut() + "' ya se encuentra registrado.");
+            throw new RutDuplicadoException("El RUT '" + request.getRut() + "' ya se encuentra registrado.");
         }
         Cliente cliente = clienteMapper.toEntity(request);
         cliente.setEstado(Estado.ACTIVO);
@@ -53,10 +54,9 @@ public class ClienteServiceImpl implements IClienteService {
                 .orElseThrow(() -> new ClienteNoEncontradoException(id));
 
         if (!clienteExistente.getRut().equals(request.getRut()) && clienteRepository.existsByRut(request.getRut())) {
-            throw new RuntimeException("El RUT '" + request.getRut() + "' ya pertenece a otro cliente.");
+            throw new RutDuplicadoException("El RUT '" + request.getRut() + "' ya pertenece a otro cliente.");
         }
 
-        // CORREGIDO: Usando los nombres reales de tus atributos de base de datos y DTO
         clienteExistente.setNombre(request.getNombre());
         clienteExistente.setRut(request.getRut());
         clienteExistente.setContactoEmail(request.getContactoEmail());
