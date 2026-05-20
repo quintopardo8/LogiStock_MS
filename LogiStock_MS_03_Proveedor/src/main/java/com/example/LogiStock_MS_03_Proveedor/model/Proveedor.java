@@ -1,4 +1,4 @@
-package com.example.LogiStock_MS_03_Proveedor.model;
+package com.example.LogiStock_MS_03_Proveedor.model; // Corregido: 'Package' y 'Ejemplo' a minúsculas
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +11,6 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 @Entity
 @Table(name = "proveedores")
 @Data
@@ -41,5 +40,4 @@ public class Proveedor {
     @Enumerated(EnumType.STRING)
     @Column(name = "estado", nullable = false)
     private Estado estado;
-
 }
