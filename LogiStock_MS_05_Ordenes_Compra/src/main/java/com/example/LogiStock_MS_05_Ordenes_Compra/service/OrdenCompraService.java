@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
+import com.example.LogiStock_MS_05_Ordenes_Compra.client.ProveedorClient;
 import com.example.LogiStock_MS_05_Ordenes_Compra.dto.request.MovimientoStockRequest;
 import com.example.LogiStock_MS_05_Ordenes_Compra.dto.request.OrdenCompraRequest;
 import com.example.LogiStock_MS_05_Ordenes_Compra.dto.response.OrdenCompraResponse;
@@ -27,6 +28,8 @@ public class OrdenCompraService {
     private final OrdenCompraRepository ordenCompraRepository;
     private final OrdenCompraMapper ordenCompraMapper;
     private final com.example.LogiStock_MS_05_Ordenes_Compra.client.InventarioClient inventarioClient;
+    private final ProveedorClient proveedorClient;
+
 
     public List<OrdenCompraResponse> obtenerTodas() {
         log.info("Consultando todas las órdenes de compra");
@@ -42,22 +45,34 @@ public class OrdenCompraService {
     }
 
     public OrdenCompraResponse guardarOrden(OrdenCompraRequest compraRequest) {
-        log.info("Creando nueva orden de compra para el proveedor: {}", compraRequest.getProveedorId());
-        
+        log.info("Creando nueva orden de compra para el proveedor ID: {}", compraRequest.getProveedorId());
+
+        try {
+            Object proveedor = proveedorClient.obtenerProveedorPorId(compraRequest.getProveedorId());
+            if (proveedor == null) {
+                throw new RuntimeException("El proveedor no fue encontrado en el sistema.");
+            }
+            log.info("Proveedor ID: {} validado correctamente en MS03.", compraRequest.getProveedorId());
+            
+        } catch (Exception e) {
+            log.error("No se pudo validar el proveedor ID: {}. Error: {}", compraRequest.getProveedorId(), e.getMessage());
+            throw new RuntimeException("No se puede crear la orden. El proveedor con ID "
+                    + compraRequest.getProveedorId() + " no existe o el servicio MS03 no está disponible.");
+        }
+
         OrdenCompra orden = ordenCompraMapper.toEntity(compraRequest);
-        
-        //Seteado en service    
         orden.setEstado(EstadoCompra.PENDIENTE);
         orden.setFechaEmision(LocalDate.now());
 
-        // Valido que lista no venga vacia, recorro detalles y los seteo a la orden que estoy creando.
         if (orden.getDetalles() != null) {
             for (DetalleOrden detalle : orden.getDetalles()) {
                 detalle.setOrdenCompra(orden);
             }
         }
 
-        return ordenCompraMapper.toResponse(ordenCompraRepository.save(orden));
+        OrdenCompraResponse response = ordenCompraMapper.toResponse(ordenCompraRepository.save(orden));
+        log.info("Orden de compra creada con ID: {}", response.getId());
+        return response;
     }
 
     public void eliminarOrden(Long id) {

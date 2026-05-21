@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.example.LogiStock_MS_05_Ordenes_Compra.dto.request.MovimientoStockRequest;
 
-@FeignClient(name = "LogiStock-MS-02-Inventario", url = "http://localhost:8081/api/v1/inventarios")
+@FeignClient(name = "LogiStock-MS-02-Inventario", url = "http://localhost:8082/api/v1/inventarios")
 public interface InventarioClient {
 
     @PostMapping("/producto/{prodId}/incrementar")
     void incrementarStock(
-        @PathVariable("prodId") Long prodId, 
-        @RequestBody MovimientoStockRequest movimientoRequest    
+        @PathVariable("prodId") Long prodId,
+        @RequestBody MovimientoStockRequest movimientoRequest
     );
 
 }
