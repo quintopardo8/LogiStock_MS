@@ -30,17 +30,7 @@ public class OrdenDespachoServiceImpl implements IOrdenDespachoService {
     public OrdenDespachoResponse crearOrden(OrdenDespachoRequest request) {
         log.info("Llamando al MS Clientes para verificar ID: {}", request.getClienteId());
         
-        try {
-            Object cliente = clienteClient.obtenerClientePorId(request.getClienteId());
-            if (cliente == null) {
-                throw new ResourceNotFoundException("El cliente no existe en el sistema remoto.");
-            }
-            log.info("Validación exitosa con MS Clientes.");
-        } catch (Exception e) {
-            log.error("Error en validación cruzada: {}", e.getMessage());
-            throw new ResourceNotFoundException("No se puede crear la orden. El cliente con ID " 
-                    + request.getClienteId() + " no existe o el servicio no está disponible.");
-        }
+        
 
         OrdenDespacho orden = mapper.toEntity(request);
         
@@ -57,6 +47,20 @@ public class OrdenDespachoServiceImpl implements IOrdenDespachoService {
     public OrdenDespachoResponse obtenerPorId(Long id) {
         OrdenDespacho orden = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Orden de despacho no encontrada con el ID: " + id));
+
+        try {
+            Cliente cliente = clienteClient.obtenerClientePorId(request.getClienteId());
+            if (cliente == null) {
+                throw new ResourceNotFoundException("El cliente no existe en el sistema remoto.");
+            }
+            log.info("Validación exitosa con MS Clientes.");
+        } catch (Exception e) {
+            log.error("Error en validación cruzada: {}", e.getMessage());
+            throw new ResourceNotFoundException("No se puede crear la orden. El cliente con ID " 
+                    + request.getClienteId() + " no existe o el servicio no está disponible.");
+        }
+
+        orden.setCliente(cliente);
         return mapper.toResponse(orden);
     }
 
