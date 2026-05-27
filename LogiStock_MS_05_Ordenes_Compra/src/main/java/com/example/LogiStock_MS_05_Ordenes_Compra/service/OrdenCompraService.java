@@ -65,6 +65,7 @@ public class OrdenCompraService {
             throw e;
         } catch (Exception e){
             log.error("No se pudo validar el proveedor ID: {}. Error: {}", compraRequest.getProveedorId(), e.getMessage());
+            throw new ProveedorNoEncontradoException(compraRequest.getProveedorId());
         }
 
         //Valido que exista proveedor
@@ -81,6 +82,7 @@ public class OrdenCompraService {
                 throw e;
             } catch (Exception e){
                 log.error("Error validando producto ID: {}. Error: {}", detalle.getProductoId(), e.getMessage());
+                throw new ProductoNoEncontradoException(detalle.getProductoId());
             }
         }    
         //Valido que existan productos

@@ -643,3 +643,234 @@ com.example.LogiStock_MS_01.exception.ProductoNoEncontradoException: No se ha en
 2026-05-20T18:44:13.851-04:00  WARN 22100 --- [LogiStock_MS_01_Productos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-05-20T18:44:14.062-04:00  INFO 22100 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
 2026-05-20T18:44:14.067-04:00  INFO 22100 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Started LogiStockMs01Application in 2.744 seconds (process running for 2.974)
+2026-05-27T17:02:43.245-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 53133 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T17:02:43.252-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T17:02:44.461-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T17:02:44.596-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 117 ms. Found 2 JPA repository interfaces.
+2026-05-27T17:02:45.487-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T17:02:45.519-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T17:02:45.520-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T17:02:45.626-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2262 ms
+2026-05-27T17:02:46.403-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T17:02:48.233-04:00  WARN 53133 --- [LogiStock_MS_01_Productos] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Unknown database 'logiStock_MS_01'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_01'
+
+2026-05-27T17:02:48.240-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-27T17:02:48.258-04:00  INFO 53133 --- [LogiStock_MS_01_Productos] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-27T17:02:48.288-04:00 ERROR 53133 --- [LogiStock_MS_01_Productos] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Unknown database 'logiStock_MS_01'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_01'
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_01.LogiStockMs01Application.main(LogiStockMs01Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Unknown database 'logiStock_MS_01'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_01'
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.sqlExceptions.FlywaySqlUnableToConnectToDbException: Unable to obtain connection from database: Unknown database 'logiStock_MS_01'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_01'
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:70) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.6.jar:4.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 17 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'logiStock_MS_01'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:65) ~[flyway-core-11.14.1.jar:na]
+	... 23 common frames omitted
+
+2026-05-27T17:03:11.978-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 53443 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T17:03:11.983-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T17:03:13.260-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T17:03:13.372-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 2 JPA repository interfaces.
+2026-05-27T17:03:14.180-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T17:03:14.207-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T17:03:14.208-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T17:03:14.297-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2202 ms
+2026-05-27T17:03:14.998-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T17:03:16.694-04:00  WARN 53443 --- [LogiStock_MS_01_Productos] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Unknown database 'logiStock_MS_01'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_01'
+
+2026-05-27T17:03:16.699-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-27T17:03:16.715-04:00  INFO 53443 --- [LogiStock_MS_01_Productos] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-27T17:03:16.749-04:00 ERROR 53443 --- [LogiStock_MS_01_Productos] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Unknown database 'logiStock_MS_01'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_01'
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_01.LogiStockMs01Application.main(LogiStockMs01Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Unknown database 'logiStock_MS_01'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_01'
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.sqlExceptions.FlywaySqlUnableToConnectToDbException: Unable to obtain connection from database: Unknown database 'logiStock_MS_01'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_01'
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:70) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:76) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:142) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.6.jar:4.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 17 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'logiStock_MS_01'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:65) ~[flyway-core-11.14.1.jar:na]
+	... 23 common frames omitted
+
+2026-05-27T17:04:44.711-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 54038 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T17:04:44.716-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T17:04:45.796-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T17:04:45.926-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 2 JPA repository interfaces.
+2026-05-27T17:04:46.735-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T17:04:46.761-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T17:04:46.762-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T17:04:46.845-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2028 ms
+2026-05-27T17:04:47.554-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T17:04:48.117-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bd08435
+2026-05-27T17:04:48.120-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T17:04:48.218-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_01 (MySQL 8.0)
+2026-05-27T17:04:48.318-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock_MS_01`.`flyway_schema_history` does not exist yet
+2026-05-27T17:04:48.326-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.049s)
+2026-05-27T17:04:48.375-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `logiStock_MS_01`.`flyway_schema_history` ...
+2026-05-27T17:04:48.506-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock_MS_01`: << Empty Schema >>
+2026-05-27T17:04:48.534-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_01` to version "1 - crear tablas"
+2026-05-27T17:04:48.746-04:00  WARN 54038 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+2026-05-27T17:04:48.767-04:00  WARN 54038 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+2026-05-27T17:04:48.768-04:00  WARN 54038 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+2026-05-27T17:04:48.768-04:00  WARN 54038 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+2026-05-27T17:04:48.795-04:00  WARN 54038 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+2026-05-27T17:04:48.796-04:00  WARN 54038 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: Integer display width is deprecated and will be removed in a future release. (SQL State: HY000 - Error Code: 1681)
+2026-05-27T17:04:48.872-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_01` to version "2 - insertar categorias"
+2026-05-27T17:04:48.948-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_01` to version "3 - insertar productos"
+2026-05-27T17:04:48.999-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_01` to version "4 - insertar producto categoria"
+2026-05-27T17:04:49.058-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 4 migrations to schema `logiStock_MS_01`, now at version v4 (execution time 00:00.303s)
+2026-05-27T17:04:49.249-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-27T17:04:49.342-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-27T17:04:50.049-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-27T17:04:50.201-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_01]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock_MS_01/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-27T17:04:51.745-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-27T17:04:51.815-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T17:04:51.970-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-27T17:04:52.213-04:00  WARN 54038 --- [LogiStock_MS_01_Productos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-27T17:04:52.782-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-05-27T17:04:52.793-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Started LogiStockMs01Application in 8.899 seconds (process running for 9.556)
+2026-05-27T17:11:16.643-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-27T17:11:16.644-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-27T17:11:16.647-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-27T17:11:16.804-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-2] c.e.L.service.ProductoService            : Consultando catálogo completo de productos
+2026-05-27T17:11:33.952-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-3] c.e.L.service.ProductoService            : Se está obteniendo el producto con el id 2
+2026-05-27T17:18:56.578-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-5] c.e.L.service.ProductoService            : Se está obteniendo el producto con el id 1
+2026-05-27T17:20:55.742-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-7] c.e.L.service.ProductoService            : Se está obteniendo el producto con el id 99999
+2026-05-27T17:21:33.364-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-8] c.e.L.service.ProductoService            : Se está obteniendo el producto con el id 1
+2026-05-27T17:22:25.671-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-9] c.e.L.service.ProductoService            : Se está obteniendo el producto con el id 1
+2026-05-27T17:22:25.703-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-10] c.e.L.service.ProductoService            : Se está obteniendo el producto con el id 2
+2026-05-27T17:30:19.910-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-2] c.e.L.service.ProductoService            : Se está obteniendo el producto con el id 99999
+2026-05-27T17:30:38.150-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-3] c.e.L.service.ProductoService            : Se está obteniendo el producto con el id 1
+2026-05-27T17:31:37.821-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-4] c.e.L.service.ProductoService            : Se está obteniendo el producto con el id 1
+2026-05-27T17:37:10.196-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-6] c.e.L.service.ProductoService            : Consultando catálogo completo de productos
+2026-05-27T17:38:04.701-04:00  INFO 54038 --- [LogiStock_MS_01_Productos] [http-nio-8081-exec-9] c.e.L.service.ProductoService            : Consultando catálogo completo de productos

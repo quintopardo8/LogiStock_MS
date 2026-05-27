@@ -1,0 +1,210 @@
+2026-05-27T17:28:14.128-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] .L.LogiStockMs05OrdenesCompraApplication : Starting LogiStockMs05OrdenesCompraApplication using Java 21.0.10 with PID 64623 (/home/sebas/LogiStock_MS/LogiStock_MS_05_Ordenes_Compra/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_05_Ordenes_Compra)
+2026-05-27T17:28:14.132-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] .L.LogiStockMs05OrdenesCompraApplication : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T17:28:15.382-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T17:28:15.497-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 2 JPA repository interfaces.
+2026-05-27T17:28:15.814-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6b6003d6-f553-39db-a0cc-7c40eafb28d0
+2026-05-27T17:28:16.486-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-05-27T17:28:16.513-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T17:28:16.514-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-05-27T17:28:16.613-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-27T17:28:16.614-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2382 ms
+2026-05-27T17:28:16.880-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-27T17:28:16.967-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-05-27T17:28:17.026-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-27T17:28:17.457-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-27T17:28:17.515-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T17:28:18.082-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@73da7f08
+2026-05-27T17:28:18.085-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T17:28:18.239-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.45
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-27T17:28:19.727-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-27T17:28:19.893-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T17:28:20.387-04:00  WARN 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-27T17:28:21.295-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-05-27T17:28:21.320-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [main] .L.LogiStockMs05OrdenesCompraApplication : Started LogiStockMs05OrdenesCompraApplication in 8.021 seconds (process running for 8.846)
+2026-05-27T17:28:31.924-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-27T17:28:31.925-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-27T17:28:31.927-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-27T17:28:31.994-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-1] c.e.L.service.OrdenCompraService         : Consultando todas las órdenes de compra
+2026-05-27T17:29:02.441-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-3] c.e.L.service.OrdenCompraService         : Eliminando orden de compra con ID: 1
+2026-05-27T17:29:07.343-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-4] c.e.L.service.OrdenCompraService         : Eliminando orden de compra con ID: 2
+2026-05-27T17:29:09.782-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-5] c.e.L.service.OrdenCompraService         : Eliminando orden de compra con ID: 3
+2026-05-27T17:29:12.160-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : Eliminando orden de compra con ID: 4
+2026-05-27T17:29:16.930-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-7] c.e.L.service.OrdenCompraService         : Consultando todas las órdenes de compra
+2026-05-27T17:29:58.867-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-8] c.e.L.service.OrdenCompraService         : Creando una nueva orden de compra para el proveedor ID: 99999
+2026-05-27T17:29:58.912-04:00 ERROR 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-8] c.e.L.service.OrdenCompraService         : No se pudo validar el proveedor ID: 99999. Error: [404] during [GET] to [http://localhost:8083/api/proveedores/99999] [ProveedorClient#obtenerProveedorPorId(Long)]: [{"timestamp":"2026-05-27T17:29:58.89758367","message":"Proveedor no encontrado con el ID: 99999","details":"uri=/api/proveedores/99999"}]
+2026-05-27T17:29:58.916-04:00 ERROR 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-8] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.example.LogiStock_MS_05_Ordenes_Compra.exception.ProveedorNoEncontradoException: No se encontró el proveedor con ID: 99999] with root cause
+
+com.example.LogiStock_MS_05_Ordenes_Compra.exception.ProveedorNoEncontradoException: No se encontró el proveedor con ID: 99999
+	at com.example.LogiStock_MS_05_Ordenes_Compra.service.OrdenCompraService.guardarOrden(OrdenCompraService.java:68) ~[classes/:na]
+	at com.example.LogiStock_MS_05_Ordenes_Compra.controller.OrdenCompraController.crearOrden(OrdenCompraController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-05-27T17:30:19.868-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-10] c.e.L.service.OrdenCompraService         : Creando una nueva orden de compra para el proveedor ID: 1
+2026-05-27T17:30:19.904-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-10] c.e.L.service.OrdenCompraService         : Proveedor ID: 1 validado correctamente.
+2026-05-27T17:30:19.921-04:00 ERROR 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-10] c.e.L.service.OrdenCompraService         : Error validando producto ID: 99999. Error: [404] during [GET] to [http://localhost:8081/api/v1/productos/99999] [ProductoClient#obtenerProductoPorId(Long)]: [{"error":"No se ha encontrado el producto con el id: 99999","timestamp":"2026-05-27T17:30:19.918585918","status":404}]
+2026-05-27T17:30:38.129-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-1] c.e.L.service.OrdenCompraService         : Creando una nueva orden de compra para el proveedor ID: 1
+2026-05-27T17:30:38.147-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-1] c.e.L.service.OrdenCompraService         : Proveedor ID: 1 validado correctamente.
+2026-05-27T17:30:38.164-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-1] c.e.L.service.OrdenCompraService         : Producto ID 1 validado correctamente
+2026-05-27T17:30:38.217-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-1] c.e.L.service.OrdenCompraService         : Orden de compra creada con ID: 5
+2026-05-27T17:30:53.681-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-3] c.e.L.service.OrdenCompraService         : Consultando todas las órdenes de compra
+2026-05-27T17:31:01.323-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-4] c.e.L.service.OrdenCompraService         : Eliminando orden de compra con ID: 5
+2026-05-27T17:31:06.103-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-5] c.e.L.service.OrdenCompraService         : Consultando todas las órdenes de compra
+2026-05-27T17:31:37.800-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : Creando una nueva orden de compra para el proveedor ID: 1
+2026-05-27T17:31:37.817-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : Proveedor ID: 1 validado correctamente.
+2026-05-27T17:31:37.838-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : Producto ID 1 validado correctamente
+2026-05-27T17:31:37.854-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : Orden de compra creada con ID: 6
+2026-05-27T17:31:51.991-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-7] c.e.L.service.OrdenCompraService         : Eliminando orden de compra con ID: 6
+2026-05-27T17:31:56.474-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-8] c.e.L.service.OrdenCompraService         : Consultando todas las órdenes de compra
+2026-05-27T17:32:10.544-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-9] c.e.L.service.OrdenCompraService         : Creando una nueva orden de compra para el proveedor ID: 99999
+2026-05-27T17:32:10.561-04:00 ERROR 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-9] c.e.L.service.OrdenCompraService         : No se pudo validar el proveedor ID: 99999. Error: [404] during [GET] to [http://localhost:8083/api/proveedores/99999] [ProveedorClient#obtenerProveedorPorId(Long)]: [{"timestamp":"2026-05-27T17:32:10.55924281","message":"Proveedor no encontrado con el ID: 99999","details":"uri=/api/proveedores/99999"}]
+2026-05-27T17:32:10.563-04:00 ERROR 64623 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.example.LogiStock_MS_05_Ordenes_Compra.exception.ProveedorNoEncontradoException: No se encontró el proveedor con ID: 99999] with root cause
+
+com.example.LogiStock_MS_05_Ordenes_Compra.exception.ProveedorNoEncontradoException: No se encontró el proveedor con ID: 99999
+	at com.example.LogiStock_MS_05_Ordenes_Compra.service.OrdenCompraService.guardarOrden(OrdenCompraService.java:68) ~[classes/:na]
+	at com.example.LogiStock_MS_05_Ordenes_Compra.controller.OrdenCompraController.crearOrden(OrdenCompraController.java:34) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.3.jar:6.2.3]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.36.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.3.jar:6.2.3]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.36.jar:10.1.36]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-05-27T17:35:00.380-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-27T17:35:00.383-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-27T17:35:00.391-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T17:35:00.394-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-27T17:35:00.405-04:00  INFO 64623 --- [LogiStock_MS_05_Ordenes_Compra] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-27T17:35:19.914-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] .L.LogiStockMs05OrdenesCompraApplication : Starting LogiStockMs05OrdenesCompraApplication using Java 21.0.10 with PID 67737 (/home/sebas/LogiStock_MS/LogiStock_MS_05_Ordenes_Compra/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_05_Ordenes_Compra)
+2026-05-27T17:35:19.919-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] .L.LogiStockMs05OrdenesCompraApplication : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T17:35:21.092-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T17:35:21.244-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 2 JPA repository interfaces.
+2026-05-27T17:35:21.591-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6b6003d6-f553-39db-a0cc-7c40eafb28d0
+2026-05-27T17:35:22.218-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2026-05-27T17:35:22.248-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T17:35:22.251-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.36]
+2026-05-27T17:35:22.350-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-27T17:35:22.351-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2334 ms
+2026-05-27T17:35:22.608-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-27T17:35:22.691-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2026-05-27T17:35:22.749-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-27T17:35:23.190-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-27T17:35:23.250-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T17:35:23.792-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@121cf6f4
+2026-05-27T17:35:23.795-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T17:35:23.947-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.45
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-27T17:35:25.416-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-27T17:35:25.586-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T17:35:26.068-04:00  WARN 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-27T17:35:26.966-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2026-05-27T17:35:26.992-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [main] .L.LogiStockMs05OrdenesCompraApplication : Started LogiStockMs05OrdenesCompraApplication in 7.916 seconds (process running for 8.722)
+2026-05-27T17:35:35.296-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-27T17:35:35.297-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-27T17:35:35.301-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-27T17:35:35.384-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-2] c.e.L.service.OrdenCompraService         : Consultando todas las órdenes de compra
+2026-05-27T17:35:41.524-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-3] c.e.L.service.OrdenCompraService         : Creando una nueva orden de compra para el proveedor ID: 99999
+2026-05-27T17:35:41.588-04:00 ERROR 67737 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-3] c.e.L.service.OrdenCompraService         : No se pudo validar el proveedor ID: 99999. Error: [404] during [GET] to [http://localhost:8083/api/proveedores/99999] [ProveedorClient#obtenerProveedorPorId(Long)]: [{"timestamp":"2026-05-27T17:35:41.562742143","message":"Proveedor no encontrado con el ID: 99999","details":"uri=/api/proveedores/99999"}]
+2026-05-27T17:40:34.058-04:00  INFO 67737 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : Creando una nueva orden de compra para el proveedor ID: 99999
+2026-05-27T17:40:34.082-04:00 ERROR 67737 --- [LogiStock_MS_05_Ordenes_Compra] [http-nio-8085-exec-6] c.e.L.service.OrdenCompraService         : No se pudo validar el proveedor ID: 99999. Error: [404] during [GET] to [http://localhost:8083/api/proveedores/99999] [ProveedorClient#obtenerProveedorPorId(Long)]: [{"timestamp":"2026-05-27T17:40:34.076494409","message":"Proveedor no encontrado con el ID: 99999","details":"uri=/api/proveedores/99999"}]
