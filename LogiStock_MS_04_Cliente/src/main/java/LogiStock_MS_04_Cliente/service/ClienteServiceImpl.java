@@ -42,8 +42,10 @@ public class ClienteServiceImpl implements IClienteService {
         if (clienteRepository.existsByRut(request.getRut())) {
             throw new RutDuplicadoException("El RUT '" + request.getRut() + "' ya se encuentra registrado.");
         }
+        
         Cliente cliente = clienteMapper.toEntity(request);
-        cliente.setEstado(Estado.ACTIVO);
+        cliente.setEstado(Estado.ACTIVO); // Forzamos estado inicial
+        
         return clienteMapper.toResponse(clienteRepository.save(cliente));
     }
 
@@ -57,11 +59,7 @@ public class ClienteServiceImpl implements IClienteService {
             throw new RutDuplicadoException("El RUT '" + request.getRut() + "' ya pertenece a otro cliente.");
         }
 
-        clienteExistente.setNombre(request.getNombre());
-        clienteExistente.setRut(request.getRut());
-        clienteExistente.setContactoEmail(request.getContactoEmail());
-        clienteExistente.setContactoTelefono(request.getContactoTelefono());
-        clienteExistente.setDireccion(request.getDireccion()); 
+        clienteMapper.updateEntityFromRequest(request, clienteExistente);
 
         return clienteMapper.toResponse(clienteRepository.save(clienteExistente));
     }

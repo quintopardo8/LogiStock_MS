@@ -13,7 +13,7 @@ import LogiStock_MS_04_Cliente.model.Cliente;
 public interface ClienteMapper {
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "estado", ignore = true)
+    @Mapping(target = "estado", constant = "ACTIVO")
     Cliente toEntity(ClienteRequest request);
 
     ClienteResponse toResponse(Cliente cliente);
@@ -21,6 +21,6 @@ public interface ClienteMapper {
     List<ClienteResponse> toResponseList(List<Cliente> clientes);
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "estado", ignore = true)
+    @Mapping(target = "estado", ignore = true) 
     void updateEntityFromRequest(ClienteRequest request, @MappingTarget Cliente entity);
 }

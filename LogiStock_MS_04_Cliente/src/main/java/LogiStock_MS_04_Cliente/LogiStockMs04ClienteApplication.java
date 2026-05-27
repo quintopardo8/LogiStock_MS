@@ -1,6 +1,5 @@
 package LogiStock_MS_04_Cliente;
 
-import org.springframework.boot.SpringBootVersion;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

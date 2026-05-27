@@ -33,5 +33,5 @@ public class Cliente {
 
     @Enumerated(EnumType.STRING)
     @Column(name = "estado", nullable = false)
-    private Estado estado;
+    private Estado estado = Estado.ACTIVO; 
 }
