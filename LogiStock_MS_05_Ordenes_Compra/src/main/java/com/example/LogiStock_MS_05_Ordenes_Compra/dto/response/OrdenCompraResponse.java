@@ -15,6 +15,6 @@ public class OrdenCompraResponse {
     private EstadoCompra estado;
     private LocalDate fechaEmision;
     private LocalDateTime fechaRecepcion;
-    private String observations;
+    private String observaciones;
     private List<DetalleOrdenResponse> detalles; // ListaCompleta PROCESADA
 }

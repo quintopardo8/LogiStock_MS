@@ -51,4 +51,16 @@ public class GlobalExceptionHandler {
 
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
+
+    @ExceptionHandler(ProductoNoEncontradoException.class)
+    public ResponseEntity<?> handleProductoNoEncontrado(ProductoNoEncontradoException ex) {
+        Map<String, Object> response = new HashMap<>();
+        response.put("timestamp", LocalDateTime.now());
+        response.put("status", 400);
+        response.put("error", "Dato Inválido");
+        response.put("mensaje", ex.getMessage());
+ 
+        return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
+    }
+    
 }
