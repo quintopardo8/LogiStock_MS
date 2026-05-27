@@ -1472,3 +1472,8 @@ Caused by: org.flywaydb.core.api.FlywayException: Found non-empty schema(s) `log
 2026-05-27T18:22:52.284-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
 2026-05-27T18:22:52.834-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
 2026-05-27T18:22:52.843-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Started LogiStockMs01Application in 8.845 seconds (process running for 9.487)
+2026-05-27T18:23:28.645-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-27T18:23:28.650-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-27T18:23:28.656-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T18:23:28.660-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-27T18:23:28.671-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
