@@ -3,10 +3,13 @@ package com.example.LogiStock_MS_03_Proveedor.dto.request;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class ProveedorRequest {
+
     @NotBlank(message = "El RUT es obligatorio")
     @Size(max = 15, message = "El RUT no puede tener más de 15 caracteres") 
     private String rut;
@@ -16,12 +19,15 @@ public class ProveedorRequest {
     private String nombre;
 
     @NotBlank(message = "El teléfono de contacto es obligatorio")
+    @Size(max = 20, message = "El teléfono de contacto no puede tener más de 20 caracteres") 
     private String contactoTelefono;
     
     @NotBlank(message = "El email de contacto es obligatorio")
     @Email(message = "El email de contacto debe ser válido")
+    @Size(max = 100, message = "El email de contacto no puede tener más de 100 caracteres")
     private String contactoEmail;
 
     @NotBlank(message = "La dirección es obligatoria")
+    @Size(max = 255, message = "La dirección no puede tener más de 255 caracteres") 
     private String direccion;
 }

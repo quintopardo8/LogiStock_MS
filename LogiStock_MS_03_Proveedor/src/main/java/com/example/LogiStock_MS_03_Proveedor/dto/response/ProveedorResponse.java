@@ -1,8 +1,10 @@
 package com.example.LogiStock_MS_03_Proveedor.dto.response;
 
-import lombok.Data; 
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class ProveedorResponse {
     private Long id;
     private String rut; 
@@ -10,5 +12,5 @@ public class ProveedorResponse {
     private String contactoTelefono;
     private String contactoEmail;
     private String direccion; 
-    private String estado;
+    private String estado; 
 }

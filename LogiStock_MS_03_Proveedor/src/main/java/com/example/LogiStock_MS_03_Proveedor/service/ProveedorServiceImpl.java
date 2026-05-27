@@ -7,25 +7,21 @@ import com.example.LogiStock_MS_03_Proveedor.mapper.ProveedorMapper;
 import com.example.LogiStock_MS_03_Proveedor.model.Estado;
 import com.example.LogiStock_MS_03_Proveedor.model.Proveedor;
 import com.example.LogiStock_MS_03_Proveedor.repository.ProveedorRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Service
+@RequiredArgsConstructor
 public class ProveedorServiceImpl implements IProveedorService {
 
     private final ProveedorRepository repository;
     private final ProveedorMapper mapper;
 
-    public ProveedorServiceImpl(ProveedorRepository repository, ProveedorMapper mapper) {
-        this.repository = repository;
-        this.mapper = mapper;
-    }
-
-    @Override // Corregido: @Override
+    @Override
     public ProveedorResponse crearProveedor(ProveedorRequest request) {
         log.info("Intentando registrar un nuevo proveedor con RUT: {}", request.getRut());
         
@@ -45,9 +41,7 @@ public class ProveedorServiceImpl implements IProveedorService {
     @Override
     public List<ProveedorResponse> listarProveedores() {
         log.info("Buscando lista completa de proveedores en la base de datos.");
-        return repository.findAll().stream()
-                .map(mapper::toResponse)
-                .collect(Collectors.toList());
+        return mapper.toResponseList(repository.findAll());
     }
 
     @Override
@@ -70,10 +64,7 @@ public class ProveedorServiceImpl implements IProveedorService {
                     return new ResourceNotFoundException("Proveedor no encontrado con el ID: " + id);
                 });
         
-        existente.setNombre(request.getNombre());
-        existente.setContactoTelefono(request.getContactoTelefono());
-        existente.setContactoEmail(request.getContactoEmail());
-        existente.setDireccion(request.getDireccion());
+        mapper.updateEntityFromRequest(request, existente);
         
         Proveedor actualizado = repository.save(existente);
         log.info("Proveedor con ID {} actualizado correctamente.", id);

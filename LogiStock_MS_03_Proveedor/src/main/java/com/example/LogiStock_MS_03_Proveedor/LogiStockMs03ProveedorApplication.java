@@ -7,7 +7,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableFeignClients
 public class LogiStockMs03ProveedorApplication {
-	public static void main(String[] args) {
-		SpringApplication.run(LogiStockMs03ProveedorApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(LogiStockMs03ProveedorApplication.class, args);
+    }
 }
