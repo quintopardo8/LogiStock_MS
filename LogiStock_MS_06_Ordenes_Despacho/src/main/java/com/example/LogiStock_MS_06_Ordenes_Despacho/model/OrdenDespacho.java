@@ -18,7 +18,7 @@ public class OrdenDespacho {
     private Long id;
 
     @Column(name = "numero_seguimiento", nullable = false, unique = true, length = 50)
-    private String numeroSeguimiento; // Código único de rastreo (ej: DESP-10024)
+    private String numeroSeguimiento; 
 
     @Column(name = "cliente_id", nullable = false)
     private Long clienteId; 

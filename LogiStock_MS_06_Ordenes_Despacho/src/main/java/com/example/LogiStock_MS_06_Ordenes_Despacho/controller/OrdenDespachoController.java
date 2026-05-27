@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/ordenes-despacho")
@@ -47,7 +48,9 @@ public class OrdenDespachoController {
     @PatchMapping("/{id}/estado")
     public ResponseEntity<OrdenDespachoResponse> cambiarEstado(
             @PathVariable Long id,
-            @RequestParam EstadoDespacho nuevoEstado) {
+            @RequestBody Map<String, String> body) { 
+        
+        EstadoDespacho nuevoEstado = EstadoDespacho.valueOf(body.get("nuevoEstado"));
         return ResponseEntity.ok(service.cambiarEstado(id, nuevoEstado));
     }
 }

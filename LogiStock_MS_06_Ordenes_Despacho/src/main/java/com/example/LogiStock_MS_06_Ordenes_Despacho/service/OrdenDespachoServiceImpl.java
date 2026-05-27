@@ -1,6 +1,7 @@
 package com.example.LogiStock_MS_06_Ordenes_Despacho.service;
 
 import com.example.LogiStock_MS_06_Ordenes_Despacho.client.ClienteClient;
+import com.example.LogiStock_MS_06_Ordenes_Despacho.dto.externa.Cliente;
 import com.example.LogiStock_MS_06_Ordenes_Despacho.dto.request.OrdenDespachoRequest;
 import com.example.LogiStock_MS_06_Ordenes_Despacho.dto.response.OrdenDespachoResponse;
 import com.example.LogiStock_MS_06_Ordenes_Despacho.exception.ResourceNotFoundException;
@@ -15,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -30,26 +32,9 @@ public class OrdenDespachoServiceImpl implements IOrdenDespachoService {
     public OrdenDespachoResponse crearOrden(OrdenDespachoRequest request) {
         log.info("Llamando al MS Clientes para verificar ID: {}", request.getClienteId());
         
-        
-
-        OrdenDespacho orden = mapper.toEntity(request);
-        
-        if (orden.getEstado() == null) {
-            orden.setEstado(EstadoDespacho.PENDIENTE); 
-        }
-
-        OrdenDespacho guardada = repository.save(orden);
-        return mapper.toResponse(guardada);
-    }
-
-    @Override
-    @Transactional(readOnly = true)
-    public OrdenDespachoResponse obtenerPorId(Long id) {
-        OrdenDespacho orden = repository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Orden de despacho no encontrada con el ID: " + id));
-
+        Cliente cliente;
         try {
-            Cliente cliente = clienteClient.obtenerClientePorId(request.getClienteId());
+            cliente = clienteClient.obtenerClientePorId(request.getClienteId());
             if (cliente == null) {
                 throw new ResourceNotFoundException("El cliente no existe en el sistema remoto.");
             }
@@ -60,8 +45,28 @@ public class OrdenDespachoServiceImpl implements IOrdenDespachoService {
                     + request.getClienteId() + " no existe o el servicio no está disponible.");
         }
 
-        orden.setCliente(cliente);
-        return mapper.toResponse(orden);
+        OrdenDespacho orden = mapper.toEntity(request);
+        
+        if (orden.getEstado() == null) {
+            orden.setEstado(EstadoDespacho.PENDIENTE); 
+        }
+
+        OrdenDespacho guardada = repository.save(orden);
+        OrdenDespachoResponse response = mapper.toResponse(guardada);
+        response.setCliente(cliente); 
+        
+        return response;
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public OrdenDespachoResponse obtenerPorId(Long id) {
+        OrdenDespacho orden = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Orden de despacho no encontrada con el ID: " + id));
+
+        OrdenDespachoResponse response = mapper.toResponse(orden);
+        response.setCliente(buscarClienteSeguro(orden.getClienteId()));
+        return response;
     }
 
     @Override
@@ -69,19 +74,34 @@ public class OrdenDespachoServiceImpl implements IOrdenDespachoService {
     public OrdenDespachoResponse obtenerPorSeguimiento(String numeroSeguimiento) {
         OrdenDespacho orden = repository.findByNumeroSeguimiento(numeroSeguimiento)
                 .orElseThrow(() -> new ResourceNotFoundException("Orden no encontrada con el código de seguimiento: " + numeroSeguimiento));
-        return mapper.toResponse(orden);
+        
+        OrdenDespachoResponse response = mapper.toResponse(orden);
+        response.setCliente(buscarClienteSeguro(orden.getClienteId()));
+        return response;
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<OrdenDespachoResponse> listarTodas() {
-        return mapper.toResponseList(repository.findAll());
+        return repository.findAll().stream()
+                .map(orden -> {
+                    OrdenDespachoResponse res = mapper.toResponse(orden);
+                    res.setCliente(buscarClienteSeguro(orden.getClienteId()));
+                    return res;
+                })
+                .collect(Collectors.toList());
     }
 
     @Override
     @Transactional(readOnly = true)
     public List<OrdenDespachoResponse> listarPorEstado(EstadoDespacho estado) {
-        return mapper.toResponseList(repository.findByEstado(estado));
+        return repository.findByEstado(estado).stream()
+                .map(orden -> {
+                    OrdenDespachoResponse res = mapper.toResponse(orden);
+                    res.setCliente(buscarClienteSeguro(orden.getClienteId()));
+                    return res;
+                })
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -95,6 +115,22 @@ public class OrdenDespachoServiceImpl implements IOrdenDespachoService {
         }
 
         orden.setEstado(nuevoEstado);
-        return mapper.toResponse(repository.save(orden));
+        OrdenDespacho guardada = repository.save(orden);
+        
+        OrdenDespachoResponse response = mapper.toResponse(guardada);
+        response.setCliente(buscarClienteSeguro(guardada.getClienteId()));
+        return response;
+    }
+
+    private Cliente buscarClienteSeguro(Long clienteId) {
+        try {
+            return clienteClient.obtenerClientePorId(clienteId);
+        } catch (Exception e) {
+            log.warn("MS Clientes no disponible para ID {}. Cargando fallback.", clienteId);
+            Cliente fallback = new Cliente();
+            fallback.setId(clienteId);
+            fallback.setNombre("Información de cliente no disponible temporalmente");
+            return fallback;
+        }
     }
 }

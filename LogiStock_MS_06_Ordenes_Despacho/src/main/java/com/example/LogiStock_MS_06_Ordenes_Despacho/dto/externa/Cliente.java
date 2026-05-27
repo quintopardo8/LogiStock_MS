@@ -7,6 +7,6 @@ public class Cliente {
     private Long id;
     private String nombre;
     private String apellido;
-    private String correo; // O 'email', cámbialo según cómo se llame en tu MS_04
+    private String correo; 
     private String telefono;
 }
