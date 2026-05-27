@@ -1,0 +1,2 @@
+INSERT INTO clientes (rut, nombre, contacto_telefono, contacto_email, direccion, estado) VALUES ('12345678-9', 'Distribuidora Alfa S.A.', '+56911112222', 'contacto@alfa.cl', 'Av. Libertad 1024, Santiago', 'ACTIVO');
+INSERT INTO clientes (rut, nombre, contacto_telefono, contacto_email, direccion, estado) VALUES ('98765432-1', 'Logística del Sur Ltda.', '+56933334444', 'info@logisur.cl', 'Calle El Roble 45, Concepción', 'ACTIVO');
