@@ -1012,3 +1012,463 @@ Caused by: java.sql.SQLException: Incorrect integer value: 'INACTIVO' for column
 	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:211) ~[flyway-core-11.14.1.jar:na]
 	... 39 common frames omitted
 
+2026-05-27T18:08:53.648-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 81027 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T18:08:53.654-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T18:08:54.883-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T18:08:54.995-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 94 ms. Found 2 JPA repository interfaces.
+2026-05-27T18:08:55.808-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T18:08:55.838-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T18:08:55.840-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T18:08:55.936-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2174 ms
+2026-05-27T18:08:56.650-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T18:08:57.265-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bd08435
+2026-05-27T18:08:57.269-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T18:08:57.374-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_01 (MySQL 8.0)
+2026-05-27T18:08:57.551-04:00  WARN 81027 --- [LogiStock_MS_01_Productos] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected failed migration to version 3 (insertar productos).
+Please remove any half-completed changes then run repair to fix the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2026-05-27T18:08:57.552-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-27T18:08:57.584-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-27T18:08:57.597-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-27T18:08:57.624-04:00  INFO 81027 --- [LogiStock_MS_01_Productos] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-27T18:08:57.684-04:00 ERROR 81027 --- [LogiStock_MS_01_Productos] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected failed migration to version 3 (insertar productos).
+Please remove any half-completed changes then run repair to fix the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_01.LogiStockMs01Application.main(LogiStockMs01Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Detected failed migration to version 3 (insertar productos).
+Please remove any half-completed changes then run repair to fix the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Detected failed migration to version 3 (insertar productos).
+Please remove any half-completed changes then run repair to fix the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:199) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.6.jar:4.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 17 common frames omitted
+
+2026-05-27T18:10:48.518-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 81792 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T18:10:48.523-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T18:10:49.761-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T18:10:49.880-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 103 ms. Found 2 JPA repository interfaces.
+2026-05-27T18:10:50.678-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T18:10:50.706-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T18:10:50.707-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T18:10:50.798-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2174 ms
+2026-05-27T18:10:51.474-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T18:10:52.045-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bd08435
+2026-05-27T18:10:52.048-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T18:10:52.146-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_01 (MySQL 8.0)
+2026-05-27T18:10:52.298-04:00  WARN 81792 --- [LogiStock_MS_01_Productos] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 1743738050
+-> Resolved locally    : 851383405
+Either revert the changes to the migration, or run repair to update the schema history.
+Detected failed migration to version 3 (insertar productos).
+Please remove any half-completed changes then run repair to fix the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+2026-05-27T18:10:52.300-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-27T18:10:52.365-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-27T18:10:52.371-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-27T18:10:52.385-04:00  INFO 81792 --- [LogiStock_MS_01_Productos] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-27T18:10:52.414-04:00 ERROR 81792 --- [LogiStock_MS_01_Productos] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 1743738050
+-> Resolved locally    : 851383405
+Either revert the changes to the migration, or run repair to update the schema history.
+Detected failed migration to version 3 (insertar productos).
+Please remove any half-completed changes then run repair to fix the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_01.LogiStockMs01Application.main(LogiStockMs01Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 1743738050
+-> Resolved locally    : 851383405
+Either revert the changes to the migration, or run repair to update the schema history.
+Detected failed migration to version 3 (insertar productos).
+Please remove any half-completed changes then run repair to fix the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.exception.FlywayValidateException: Validate failed: Migrations have failed validation
+Migration checksum mismatch for migration version 1
+-> Applied to database : 1743738050
+-> Resolved locally    : 851383405
+Either revert the changes to the migration, or run repair to update the schema history.
+Detected failed migration to version 3 (insertar productos).
+Please remove any half-completed changes then run repair to fix the schema history.
+Need more flexibility with validation rules? Learn more: https://rd.gt/3AbJUZE
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:199) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.6.jar:4.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 17 common frames omitted
+
+2026-05-27T18:14:46.967-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 83605 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T18:14:46.972-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T18:14:48.074-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T18:14:48.182-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+2026-05-27T18:14:48.965-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T18:14:48.997-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T18:14:48.998-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T18:14:49.084-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2010 ms
+2026-05-27T18:14:49.388-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-27T18:14:49.498-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-27T18:14:50.254-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-27T18:14:50.319-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T18:14:52.005-04:00  WARN 83605 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1049, SQLState: 42000
+2026-05-27T18:14:52.005-04:00  WARN 83605 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.jdbc.error             : Unknown database 'logiStock_MS_01'
+2026-05-27T18:14:52.007-04:00  WARN 83605 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC connection [Unknown database 'logiStock_MS_01'] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:63) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_01.LogiStockMs01Application.main(LogiStockMs01Application.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'logiStock_MS_01'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	... 37 common frames omitted
+
+2026-05-27T18:14:52.020-04:00 ERROR 83605 --- [LogiStock_MS_01_Productos] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-05-27T18:14:52.022-04:00  WARN 83605 --- [LogiStock_MS_01_Productos] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-05-27T18:14:52.029-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-27T18:14:52.046-04:00  INFO 83605 --- [LogiStock_MS_01_Productos] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-27T18:14:52.083-04:00 ERROR 83605 --- [LogiStock_MS_01_Productos] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_01.LogiStockMs01Application.main(LogiStockMs01Application.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	... 31 common frames omitted
+
+2026-05-27T18:17:05.756-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 84531 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T18:17:05.761-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T18:17:06.830-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T18:17:06.938-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 91 ms. Found 2 JPA repository interfaces.
+2026-05-27T18:17:07.682-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T18:17:07.726-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T18:17:07.727-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T18:17:07.833-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1972 ms
+2026-05-27T18:17:08.131-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-27T18:17:08.215-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-27T18:17:08.915-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-27T18:17:08.974-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T18:17:09.563-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61d011e
+2026-05-27T18:17:09.567-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T18:17:09.724-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_01]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock_MS_01/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-27T18:17:11.493-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-27T18:17:11.784-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T18:17:11.946-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-27T18:17:12.231-04:00  WARN 84531 --- [LogiStock_MS_01_Productos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-27T18:17:12.842-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-05-27T18:17:12.853-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Started LogiStockMs01Application in 7.901 seconds (process running for 8.574)
+2026-05-27T18:20:07.397-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-27T18:20:07.402-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-27T18:20:07.408-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T18:20:07.412-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-27T18:20:07.425-04:00  INFO 84531 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-27T18:20:24.667-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 85662 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T18:20:24.672-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T18:20:25.769-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T18:20:25.882-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
+2026-05-27T18:20:26.635-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T18:20:26.683-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T18:20:26.684-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T18:20:26.770-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1988 ms
+2026-05-27T18:20:27.067-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-27T18:20:27.154-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-27T18:20:27.864-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-27T18:20:27.926-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T18:20:28.491-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@61d011e
+2026-05-27T18:20:28.494-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T18:20:28.646-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_01]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock_MS_01/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-27T18:20:30.758-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-27T18:20:30.904-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T18:20:31.072-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-27T18:20:31.317-04:00  WARN 85662 --- [LogiStock_MS_01_Productos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-27T18:20:31.953-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-05-27T18:20:31.964-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Started LogiStockMs01Application in 8.19 seconds (process running for 8.734)
+2026-05-27T18:20:36.997-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-27T18:20:37.002-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-27T18:20:37.008-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T18:20:37.012-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-27T18:20:37.025-04:00  INFO 85662 --- [LogiStock_MS_01_Productos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-27T18:21:15.030-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 86156 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T18:21:15.037-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T18:21:16.258-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T18:21:16.369-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces.
+2026-05-27T18:21:17.144-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T18:21:17.172-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T18:21:17.173-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T18:21:17.265-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2117 ms
+2026-05-27T18:21:17.973-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T18:21:18.556-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b7d2d51
+2026-05-27T18:21:18.559-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T18:21:18.654-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_01 (MySQL 8.0)
+2026-05-27T18:21:18.759-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock_MS_01`.`flyway_schema_history` does not exist yet
+2026-05-27T18:21:18.767-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.049s)
+2026-05-27T18:21:18.841-04:00  WARN 86156 --- [LogiStock_MS_01_Productos] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Found non-empty schema(s) `logiStock_MS_01` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+2026-05-27T18:21:18.843-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-27T18:21:18.879-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-27T18:21:18.886-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-27T18:21:18.914-04:00  INFO 86156 --- [LogiStock_MS_01_Productos] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-27T18:21:18.964-04:00 ERROR 86156 --- [LogiStock_MS_01_Productos] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Found non-empty schema(s) `logiStock_MS_01` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_01.LogiStockMs01Application.main(LogiStockMs01Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Found non-empty schema(s) `logiStock_MS_01` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.FlywayException: Found non-empty schema(s) `logiStock_MS_01` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:235) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.6.jar:4.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 17 common frames omitted
+
+2026-05-27T18:22:44.873-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Starting LogiStockMs01Application using Java 21.0.10 with PID 86695 (/home/sebas/LogiStock_MS/LogiStock_MS_01_Productos/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_01_Productos)
+2026-05-27T18:22:44.878-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T18:22:45.973-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T18:22:46.083-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 2 JPA repository interfaces.
+2026-05-27T18:22:46.889-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-27T18:22:46.920-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T18:22:46.924-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T18:22:47.019-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2038 ms
+2026-05-27T18:22:47.696-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T18:22:48.247-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3bd08435
+2026-05-27T18:22:48.251-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T18:22:48.346-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_01 (MySQL 8.0)
+2026-05-27T18:22:48.443-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock_MS_01`.`flyway_schema_history` does not exist yet
+2026-05-27T18:22:48.452-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.044s)
+2026-05-27T18:22:48.494-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `logiStock_MS_01`.`flyway_schema_history` ...
+2026-05-27T18:22:48.621-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock_MS_01`: << Empty Schema >>
+2026-05-27T18:22:48.644-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_01` to version "1 - crear tablas"
+2026-05-27T18:22:48.848-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3_unicode_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead. (SQL State: HY000 - Error Code: 3778)
+2026-05-27T18:22:48.849-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3_unicode_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead. (SQL State: HY000 - Error Code: 3778)
+2026-05-27T18:22:48.849-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3' is deprecated and will be removed in a future release. Please use utf8mb4 instead (SQL State: HY000 - Error Code: 1287)
+2026-05-27T18:22:48.850-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3_unicode_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead. (SQL State: HY000 - Error Code: 3778)
+2026-05-27T18:22:48.871-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3_unicode_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead. (SQL State: HY000 - Error Code: 3778)
+2026-05-27T18:22:48.872-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3_unicode_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead. (SQL State: HY000 - Error Code: 3778)
+2026-05-27T18:22:48.872-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3_unicode_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead. (SQL State: HY000 - Error Code: 3778)
+2026-05-27T18:22:48.872-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3_unicode_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead. (SQL State: HY000 - Error Code: 3778)
+2026-05-27T18:22:48.873-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3' is deprecated and will be removed in a future release. Please use utf8mb4 instead (SQL State: HY000 - Error Code: 1287)
+2026-05-27T18:22:48.873-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3_unicode_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead. (SQL State: HY000 - Error Code: 3778)
+2026-05-27T18:22:48.900-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3' is deprecated and will be removed in a future release. Please use utf8mb4 instead (SQL State: HY000 - Error Code: 1287)
+2026-05-27T18:22:48.901-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] o.f.c.i.s.DefaultSqlScriptExecutor       : DB: 'utf8mb3_unicode_ci' is a collation of the deprecated character set UTF8MB3. Please consider using UTF8MB4 with an appropriate collation instead. (SQL State: HY000 - Error Code: 3778)
+2026-05-27T18:22:48.979-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_01` to version "2 - insertar categorias"
+2026-05-27T18:22:49.047-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_01` to version "3 - insertar productos"
+2026-05-27T18:22:49.109-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_01` to version "4 - insertar producto categoria"
+2026-05-27T18:22:49.174-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 4 migrations to schema `logiStock_MS_01`, now at version v4 (execution time 00:00.299s)
+2026-05-27T18:22:49.360-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-27T18:22:49.459-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-27T18:22:50.189-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-27T18:22:50.342-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_01]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock_MS_01/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-27T18:22:51.825-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-27T18:22:51.896-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T18:22:52.046-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-27T18:22:52.284-04:00  WARN 86695 --- [LogiStock_MS_01_Productos] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-27T18:22:52.834-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-05-27T18:22:52.843-04:00  INFO 86695 --- [LogiStock_MS_01_Productos] [main] c.e.L.LogiStockMs01Application           : Started LogiStockMs01Application in 8.845 seconds (process running for 9.487)
