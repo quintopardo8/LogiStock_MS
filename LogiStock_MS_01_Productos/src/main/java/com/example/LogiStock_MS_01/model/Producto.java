@@ -4,6 +4,8 @@ import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -35,7 +37,9 @@ public class Producto {
     @Column(name = "descripcion", nullable = false, length = 200)
     private String descripcion;
 
+    
     @Column(name = "estado", nullable = false)
+    @Enumerated(EnumType.STRING)
     private Estado estado;
 
     @Column(name = "precio", nullable = false)
