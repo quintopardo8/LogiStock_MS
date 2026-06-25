@@ -1,0 +1,50 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: logistock-ms-03-proveedor
+  
+  # Base de datos adaptada para Docker y Local
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:logiStock_MS_03}
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:Fernandabravo.88}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQLDialect
+
+  flyway:
+    enabled: true
+
+# Configuración de Logs (Ataca la exigencia del profe)
+logging:
+  file:
+    name: logs/microservice-proveedor.log
+  level:
+    com.example.LogiStock_MS_03_Proveedor: INFO
+    org.springframework.web: INFO
+
+# Conexión dinámica con Eureka Server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_HOST:localhost}:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true # CRÍTICO: Permite que el Gateway lo encuentre dentro de Docker usando IPs internas
+
+# Configuración completa de Swagger / OpenAPI (Tu valor agregado)
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html

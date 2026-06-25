@@ -1,0 +1,981 @@
+2026-05-19T18:52:00.716-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.10 with PID 52260 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS)
+2026-05-19T18:52:00.730-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-19T18:52:02.729-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-19T18:52:02.874-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 122 ms. Found 1 JPA repository interface.
+2026-05-19T18:52:04.044-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-19T18:52:04.079-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-19T18:52:04.080-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-19T18:52:04.194-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3261 ms
+2026-05-19T18:52:05.136-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-19T18:52:05.848-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@b7d2d51
+2026-05-19T18:52:05.852-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-19T18:52:05.975-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock (MySQL 8.0)
+2026-05-19T18:52:06.155-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbValidate     : Successfully validated 4 migrations (execution time 00:00.094s)
+2026-05-19T18:52:06.229-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock`: 4
+2026-05-19T18:52:06.230-04:00 ERROR 52260 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Schema `logiStock` has version 4, but no migration could be resolved in the configured locations !
+2026-05-19T18:52:06.242-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Schema `logiStock` is up to date. No migration necessary.
+2026-05-19T18:52:06.542-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-19T18:52:06.680-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-19T18:52:07.541-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-19T18:52:07.700-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-19T18:52:09.061-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-19T18:52:09.196-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-19T18:52:09.395-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-19T18:52:09.756-04:00  WARN 52260 --- [LogiStock_MS_02_Inventario] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-19T18:52:10.563-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-05-19T18:52:10.578-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Started LogiStockMs02Application in 11.188 seconds (process running for 12.171)
+2026-05-19T18:53:25.058-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-19T18:53:25.059-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-19T18:53:25.063-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-19T18:53:39.047-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-3] c.e.L.service.InventarioService          : Creando registro de inventario para producto ID: 1
+2026-05-19T18:54:20.758-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-5] c.e.L.service.InventarioService          : Buscando inventario del producto con id 1
+2026-05-19T18:54:43.537-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-7] c.e.L.service.InventarioService          : Buscando registro de inventario con id 1
+2026-05-19T18:59:26.954-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-19T18:59:26.958-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-19T18:59:26.965-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-19T18:59:26.969-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-19T18:59:26.986-04:00  INFO 52260 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-20T15:33:42.774-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.10 with PID 53924 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS)
+2026-05-20T15:33:42.782-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-20T15:33:44.778-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20T15:33:44.981-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 170 ms. Found 1 JPA repository interface.
+2026-05-20T15:33:46.179-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-20T15:33:46.215-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-20T15:33:46.216-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-20T15:33:46.330-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3388 ms
+2026-05-20T15:33:47.419-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-20T15:33:48.189-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c212536
+2026-05-20T15:33:48.194-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-20T15:33:48.331-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock (MySQL 8.0)
+2026-05-20T15:33:48.484-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock`.`flyway_schema_history` does not exist yet
+2026-05-20T15:33:48.494-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.071s)
+2026-05-20T15:33:48.610-04:00  WARN 53924 --- [LogiStock_MS_02_Inventario] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Found non-empty schema(s) `logiStock` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+2026-05-20T15:33:48.612-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-20T15:33:48.690-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-20T15:33:48.699-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-20T15:33:48.716-04:00  INFO 53924 --- [LogiStock_MS_02_Inventario] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-20T15:33:48.749-04:00 ERROR 53924 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Found non-empty schema(s) `logiStock` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_02.LogiStockMs02Application.main(LogiStockMs02Application.java:10) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Found non-empty schema(s) `logiStock` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.api.FlywayException: Found non-empty schema(s) `logiStock` but no schema history table. Use baseline() or set baselineOnMigrate to true to initialize the schema history table.
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:235) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:240) ~[flyway-core-11.14.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:186) ~[flyway-core-11.14.1.jar:na]
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67) ~[spring-boot-flyway-4.0.6.jar:4.0.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 17 common frames omitted
+
+2026-05-20T15:39:23.576-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.10 with PID 55843 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS)
+2026-05-20T15:39:23.582-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-20T15:39:25.240-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20T15:39:25.390-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 1 JPA repository interface.
+2026-05-20T15:39:26.708-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-20T15:39:26.758-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-20T15:39:26.759-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-20T15:39:26.905-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3186 ms
+2026-05-20T15:39:27.868-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-20T15:39:28.629-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@c212536
+2026-05-20T15:39:28.632-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-20T15:39:28.768-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_02 (MySQL 8.0)
+2026-05-20T15:39:28.899-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock_MS_02`.`flyway_schema_history` does not exist yet
+2026-05-20T15:39:28.906-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.064s)
+2026-05-20T15:39:28.968-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `logiStock_MS_02`.`flyway_schema_history` ...
+2026-05-20T15:39:29.129-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock_MS_02`: << Empty Schema >>
+2026-05-20T15:39:29.158-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "1 - crear tablas"
+2026-05-20T15:39:29.296-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "2 - insertar inventarios"
+2026-05-20T15:39:29.380-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema `logiStock_MS_02`, now at version v2 (execution time 00:00.060s)
+2026-05-20T15:39:29.640-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-20T15:39:29.771-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-20T15:39:30.697-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-20T15:39:30.854-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_02]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock_MS_02/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-20T15:39:32.204-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-20T15:39:32.300-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T15:39:32.480-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-20T15:39:32.905-04:00  WARN 55843 --- [LogiStock_MS_02_Inventario] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-20T15:39:33.640-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-05-20T15:39:33.652-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Started LogiStockMs02Application in 11.217 seconds (process running for 12.45)
+2026-05-20T15:40:59.238-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-20T15:40:59.247-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-20T15:40:59.256-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T15:40:59.264-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-20T15:40:59.312-04:00  INFO 55843 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-20T15:49:42.338-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.10 with PID 59702 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS)
+2026-05-20T15:49:42.346-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-20T15:49:44.077-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20T15:49:44.208-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 1 JPA repository interface.
+2026-05-20T15:49:45.435-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-05-20T15:49:45.494-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-20T15:49:45.496-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-20T15:49:45.672-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3178 ms
+2026-05-20T15:49:46.223-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-20T15:49:46.366-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-20T15:49:47.668-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-20T15:49:47.780-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-20T15:49:48.710-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49cceb19
+2026-05-20T15:49:48.714-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-20T15:49:48.913-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_02]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock_MS_02/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-20T15:49:50.675-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-20T15:49:50.794-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T15:49:50.993-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-20T15:49:51.443-04:00  WARN 59702 --- [LogiStock_MS_02_Inventario] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-20T15:49:52.374-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-05-20T15:49:52.393-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Started LogiStockMs02Application in 11.402 seconds (process running for 12.284)
+2026-05-20T15:49:57.510-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-20T15:49:57.510-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-20T15:49:57.514-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-05-20T15:49:57.855-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [http-nio-8081-exec-1] c.e.L.service.InventarioService          : Creando registro de inventario para producto ID: 1
+2026-05-20T15:50:37.790-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-20T15:50:37.798-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-05-20T15:50:37.808-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T15:50:37.813-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-05-20T15:50:37.833-04:00  INFO 59702 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-05-20T18:47:02.353-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.9 with PID 27300 (C:\Users\va-alumno\Desktop\LogiStock_MS\LogiStock_MS_02_Inventario\target\classes started by VA-Alumno in C:\Users\va-alumno\Desktop\LogiStock_MS)
+2026-05-20T18:47:02.357-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-20T18:47:02.864-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20T18:47:02.907-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interface.
+2026-05-20T18:47:03.268-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-05-20T18:47:03.279-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-20T18:47:03.280-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-20T18:47:03.325-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 935 ms
+2026-05-20T18:47:03.465-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-20T18:47:03.528-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-20T18:47:03.888-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-20T18:47:03.908-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-20T18:47:05.311-04:00  WARN 27300 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jdbc.error             : HHH000247: ErrorCode: 1049, SQLState: 42000
+2026-05-20T18:47:05.313-04:00  WARN 27300 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jdbc.error             : Unknown database 'logistock_ms_02'
+2026-05-20T18:47:05.315-04:00  WARN 27300 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jdbc                   : HHH100046: Could not obtain connection to query JDBC database metadata
+
+org.hibernate.exception.SQLGrammarException: Unable to obtain isolated JDBC connection [Unknown database 'logistock_ms_02'] [n/a]
+	at org.hibernate.exception.internal.SQLStateConversionDelegate.convert(SQLStateConversionDelegate.java:63) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:34) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:115) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:101) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:51) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:366) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_02.LogiStockMs02Application.main(LogiStockMs02Application.java:10) ~[classes/:na]
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'logistock_ms_02'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:840) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:416) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:237) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:180) ~[mysql-connector-j-9.7.0.jar:9.7.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:144) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:373) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:210) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:488) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:576) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:97) ~[HikariCP-7.0.2.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-7.0.2.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DataSourceConnectionProvider.getConnection(DataSourceConnectionProvider.java:137) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:508) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:48) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	... 37 common frames omitted
+
+2026-05-20T18:47:05.320-04:00 ERROR 27300 --- [LogiStock_MS_02_Inventario] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-05-20T18:47:05.321-04:00  WARN 27300 --- [LogiStock_MS_02_Inventario] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+2026-05-20T18:47:05.322-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-05-20T18:47:05.327-04:00  INFO 27300 --- [LogiStock_MS_02_Inventario] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-05-20T18:47:05.336-04:00 ERROR 27300 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1817) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.7.jar:7.0.7]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.6.jar:4.0.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.6.jar:4.0.6]
+	at com.example.LogiStock_MS_02.LogiStockMs02Application.main(LogiStockMs02Application.java:10) ~[classes/:na]
+Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:273) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:235) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:212) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:251) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:203) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:172) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1392) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.populateSessionFactoryBuilder(EntityManagerFactoryBuilderImpl.java:1472) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1454) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419) ~[spring-orm-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1864) ~[spring-beans-7.0.7.jar:7.0.7]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1813) ~[spring-beans-7.0.7.jar:7.0.7]
+	... 15 common frames omitted
+Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'jakarta.persistence.jdbc.url' for common cases or 'hibernate.dialect' when a custom Dialect implementation must be provided)
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:190) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:86) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentWithDefaults(JdbcEnvironmentInitiator.java:200) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:452) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironment(JdbcEnvironmentInitiator.java:143) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:120) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:80) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:133) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:260) ~[hibernate-core-7.2.12.Final.jar:7.2.12.Final]
+	... 31 common frames omitted
+
+2026-05-20T18:48:17.922-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.9 with PID 22680 (C:\Users\va-alumno\Desktop\LogiStock_MS\LogiStock_MS_02_Inventario\target\classes started by VA-Alumno in C:\Users\va-alumno\Desktop\LogiStock_MS)
+2026-05-20T18:48:17.926-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-20T18:48:18.352-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-20T18:48:18.388-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 1 JPA repository interface.
+2026-05-20T18:48:18.705-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-05-20T18:48:18.716-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-20T18:48:18.717-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-20T18:48:18.763-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 802 ms
+2026-05-20T18:48:18.907-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-20T18:48:18.998-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-20T18:48:19.318-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-20T18:48:19.334-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-20T18:48:19.428-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e3900dc
+2026-05-20T18:48:19.430-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-20T18:48:19.458-04:00  WARN 22680 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000511: The 5.5.5 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly.The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-20T18:48:19.471-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_02]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 5.5.5
+	Default catalog/schema: logiStock_MS_02/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-20T18:48:19.931-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-20T18:48:19.960-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-20T18:48:20.014-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-20T18:48:20.161-04:00  WARN 22680 --- [LogiStock_MS_02_Inventario] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-20T18:48:20.375-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-05-20T18:48:20.379-04:00  INFO 22680 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Started LogiStockMs02Application in 2.749 seconds (process running for 2.981)
+2026-05-27T17:12:08.752-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.10 with PID 57325 (/home/sebas/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/LogiStock_MS/LogiStock_MS_02_Inventario)
+2026-05-27T17:12:08.759-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-05-27T17:12:09.945-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-27T17:12:10.061-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 1 JPA repository interface.
+2026-05-27T17:12:10.906-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8082 (http)
+2026-05-27T17:12:10.942-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-27T17:12:10.944-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-05-27T17:12:11.081-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2191 ms
+2026-05-27T17:12:11.849-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-27T17:12:12.460-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4aa22cc2
+2026-05-27T17:12:12.464-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-27T17:12:12.566-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_02 (MySQL 8.0)
+2026-05-27T17:12:12.675-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock_MS_02`.`flyway_schema_history` does not exist yet
+2026-05-27T17:12:12.683-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.047s)
+2026-05-27T17:12:12.741-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `logiStock_MS_02`.`flyway_schema_history` ...
+2026-05-27T17:12:12.871-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock_MS_02`: << Empty Schema >>
+2026-05-27T17:12:12.892-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "1 - crear tablas"
+2026-05-27T17:12:13.006-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "2 - insertar inventarios"
+2026-05-27T17:12:13.103-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema `logiStock_MS_02`, now at version v2 (execution time 00:00.047s)
+2026-05-27T17:12:13.386-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-05-27T17:12:13.481-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-05-27T17:12:14.295-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-27T17:12:14.454-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/logiStock_MS_02]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.0.45
+	Default catalog/schema: logiStock_MS_02/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-27T17:12:15.908-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-27T17:12:15.997-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-27T17:12:16.188-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-05-27T17:12:16.546-04:00  WARN 57325 --- [LogiStock_MS_02_Inventario] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-27T17:12:17.163-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8082 (http) with context path '/'
+2026-05-27T17:12:17.172-04:00  INFO 57325 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Started LogiStockMs02Application in 9.322 seconds (process running for 10.073)
+2026-06-20T21:58:52.865-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.11 with PID 70885 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario)
+2026-06-20T21:58:52.869-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-06-20T21:58:54.339-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20T21:58:54.615-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 262 ms. Found 1 JPA repository interface.
+2026-06-20T21:58:55.108-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=add5597f-8074-34b9-a797-df2f8b6b07c1
+2026-06-20T21:58:55.359-04:00  WARN 70885 --- [LogiStock_MS_02_Inventario] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-06-20T21:58:55.364-04:00  WARN 70885 --- [LogiStock_MS_02_Inventario] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-06-20T21:58:55.750-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-20T21:58:55.778-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T21:58:55.779-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-06-20T21:58:55.883-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-20T21:58:55.883-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2920 ms
+2026-06-20T21:58:56.292-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T21:58:57.912-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T21:58:58.955-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T21:58:59.993-04:00  WARN 70885 --- [LogiStock_MS_02_Inventario] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Access denied for user 'root'@'localhost'
+------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1698
+Message    : Access denied for user 'root'@'localhost'
+
+2026-06-20T21:59:00.000-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-20T21:59:00.035-04:00  INFO 70885 --- [LogiStock_MS_02_Inventario] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-20T21:59:00.082-04:00 ERROR 70885 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Access denied for user 'root'@'localhost'
+------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1698
+Message    : Access denied for user 'root'@'localhost'
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.example.LogiStock_MS_02.LogiStockMs02Application.main(LogiStockMs02Application.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Access denied for user 'root'@'localhost'
+------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1698
+Message    : Access denied for user 'root'@'localhost'
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.14.jar:6.1.14]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: Access denied for user 'root'@'localhost'
+------------------------------------------------------------------------------------
+SQL State  : 28000
+Error Code : 1698
+Message    : Access denied for user 'root'@'localhost'
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60) ~[flyway-core-10.10.0.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:72) ~[flyway-core-10.10.0.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:134) ~[flyway-core-10.10.0.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:147) ~[flyway-core-10.10.0.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.3.5.jar:3.3.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.14.jar:6.1.14]
+	... 17 common frames omitted
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:130) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-10.10.0.jar:na]
+	... 23 common frames omitted
+
+2026-06-20T22:15:45.081-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.11 with PID 79491 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario)
+2026-06-20T22:15:45.087-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-06-20T22:15:46.399-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20T22:15:46.667-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 254 ms. Found 1 JPA repository interface.
+2026-06-20T22:15:47.122-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=add5597f-8074-34b9-a797-df2f8b6b07c1
+2026-06-20T22:15:47.370-04:00  WARN 79491 --- [LogiStock_MS_02_Inventario] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-06-20T22:15:47.375-04:00  WARN 79491 --- [LogiStock_MS_02_Inventario] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-06-20T22:15:47.743-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-20T22:15:47.772-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T22:15:47.772-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-06-20T22:15:47.878-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-20T22:15:47.879-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2703 ms
+2026-06-20T22:15:48.274-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T22:15:49.809-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T22:15:50.844-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T22:15:51.886-04:00  WARN 79491 --- [LogiStock_MS_02_Inventario] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Unknown database 'logiStock_MS_02'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_02'
+
+2026-06-20T22:15:51.892-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-06-20T22:15:51.923-04:00  INFO 79491 --- [LogiStock_MS_02_Inventario] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-06-20T22:15:51.966-04:00 ERROR 79491 --- [LogiStock_MS_02_Inventario] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Unknown database 'logiStock_MS_02'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_02'
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:326) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:205) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:954) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.5.jar:3.3.5]
+	at com.example.LogiStock_MS_02.LogiStockMs02Application.main(LogiStockMs02Application.java:12) ~[classes/:na]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Unable to obtain connection from database: Unknown database 'logiStock_MS_02'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_02'
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:313) ~[spring-beans-6.1.14.jar:6.1.14]
+	... 10 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywaySqlException: Unable to obtain connection from database: Unknown database 'logiStock_MS_02'
+-----------------------------------------------------------------------------
+SQL State  : 42000
+Error Code : 1049
+Message    : Unknown database 'logiStock_MS_02'
+
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:60) ~[flyway-core-10.10.0.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcConnectionFactory.<init>(JdbcConnectionFactory.java:72) ~[flyway-core-10.10.0.jar:na]
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:134) ~[flyway-core-10.10.0.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:147) ~[flyway-core-10.10.0.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-3.3.5.jar:3.3.5]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802) ~[spring-beans-6.1.14.jar:6.1.14]
+	... 17 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Unknown database 'logiStock_MS_02'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:121) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:815) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:438) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:189) ~[mysql-connector-j-8.3.0.jar:8.3.0]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.flywaydb.core.internal.jdbc.JdbcUtils.openConnection(JdbcUtils.java:48) ~[flyway-core-10.10.0.jar:na]
+	... 23 common frames omitted
+
+2026-06-20T22:16:25.063-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.11 with PID 80138 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario)
+2026-06-20T22:16:25.067-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-06-20T22:16:26.308-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20T22:16:26.569-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 247 ms. Found 1 JPA repository interface.
+2026-06-20T22:16:27.030-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=add5597f-8074-34b9-a797-df2f8b6b07c1
+2026-06-20T22:16:27.287-04:00  WARN 80138 --- [LogiStock_MS_02_Inventario] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-06-20T22:16:27.291-04:00  WARN 80138 --- [LogiStock_MS_02_Inventario] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-06-20T22:16:27.667-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-20T22:16:27.695-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T22:16:27.696-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-06-20T22:16:27.794-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-20T22:16:27.795-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2641 ms
+2026-06-20T22:16:28.213-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T22:16:28.782-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2a1e57c6
+2026-06-20T22:16:28.786-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-20T22:16:28.876-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_02 (MySQL 8.0)
+2026-06-20T22:16:28.948-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock_MS_02`.`flyway_schema_history` does not exist yet
+2026-06-20T22:16:28.954-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.034s)
+2026-06-20T22:16:28.994-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `logiStock_MS_02`.`flyway_schema_history` ...
+2026-06-20T22:16:29.105-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock_MS_02`: << Empty Schema >>
+2026-06-20T22:16:29.121-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "1 - crear tablas"
+2026-06-20T22:16:29.209-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "2 - insertar inventarios"
+2026-06-20T22:16:29.266-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema `logiStock_MS_02`, now at version v2 (execution time 00:00.035s)
+2026-06-20T22:16:29.414-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-20T22:16:29.501-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-06-20T22:16:29.558-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-20T22:16:30.020-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-20T22:16:31.611-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-20T22:16:31.678-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-20T22:16:32.314-04:00  WARN 80138 --- [LogiStock_MS_02_Inventario] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-20T22:16:33.156-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-06-20T22:16:33.235-04:00  WARN 80138 --- [LogiStock_MS_02_Inventario] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-20T22:16:33.298-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-20T22:16:33.366-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-20T22:16:33.379-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T22:16:33.407-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-20T22:16:33.408-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-20T22:16:33.408-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-20T22:16:33.408-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-20T22:16:33.409-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-20T22:16:33.409-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-20T22:16:33.409-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-20T22:16:33.908-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-20T22:16:33.911-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-20T22:16:33.915-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-20T22:16:33.920-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782008193917 with initial instances count: 1
+2026-06-20T22:16:33.927-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LOGISTOCK_MS_02_INVENTARIO with eureka with status UP
+2026-06-20T22:16:33.928-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782008193928, current=UP, previous=STARTING]
+2026-06-20T22:16:33.932-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGISTOCK_MS_02_INVENTARIO/192.168.1.7:LogiStock_MS_02_Inventario:8082: registering service...
+2026-06-20T22:16:33.975-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-06-20T22:16:33.977-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-06-20T22:16:34.011-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGISTOCK_MS_02_INVENTARIO/192.168.1.7:LogiStock_MS_02_Inventario:8082 - registration status: 204
+2026-06-20T22:16:34.019-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [main] c.e.L.LogiStockMs02Application           : Started LogiStockMs02Application in 9.78 seconds (process running for 10.487)
+2026-06-20T22:21:33.413-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T22:26:33.414-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T22:31:33.415-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T22:36:33.416-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T22:41:33.417-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T22:43:46.508-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application LOGISTOCK_MS_02_INVENTARIO with eureka with status DOWN
+2026-06-20T22:43:46.508-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782009826508, current=DOWN, previous=UP]
+2026-06-20T22:43:46.514-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGISTOCK_MS_02_INVENTARIO/192.168.1.7:LogiStock_MS_02_Inventario:8082: registering service...
+2026-06-20T22:43:46.541-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-20T22:43:46.546-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-20T22:43:46.549-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/} exception=I/O error on POST request for "http://localhost:8761/eureka/apps/LOGISTOCK_MS_02_INVENTARIO": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/LOGISTOCK_MS_02_INVENTARIO": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:91)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 21 more
+
+2026-06-20T22:43:46.550-04:00  WARN 80138 --- [LogiStock_MS_02_Inventario] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/LOGISTOCK_MS_02_INVENTARIO": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada
+2026-06-20T22:43:46.562-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-20T22:43:46.566-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-20T22:43:46.571-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on POST request for "http://localhost:8761/eureka/apps/LOGISTOCK_MS_02_INVENTARIO": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8761/eureka/apps/LOGISTOCK_MS_02_INVENTARIO": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.register(RestTemplateEurekaHttpClient.java:77)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56)
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828)
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125)
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 22 more
+
+2026-06-20T22:43:46.572-04:00  WARN 80138 --- [LogiStock_MS_02_Inventario] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on POST request for "http://localhost:8761/eureka/apps/LOGISTOCK_MS_02_INVENTARIO": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada
+2026-06-20T22:43:46.573-04:00  WARN 80138 --- [LogiStock_MS_02_Inventario] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGISTOCK_MS_02_INVENTARIO/192.168.1.7:LogiStock_MS_02_Inventario:8082 - registration failed Cannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.3.jar:2.0.3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-06-20T22:43:46.582-04:00  WARN 80138 --- [LogiStock_MS_02_Inventario] [DiscoveryClient-InstanceInfoReplicator-%d] c.n.discovery.InstanceInfoReplicator     : There was a problem with the instance info replicator
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:828) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:125) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.InstanceInfoReplicator$2.run(InstanceInfoReplicator.java:105) ~[eureka-client-2.0.3.jar:2.0.3]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-06-20T22:43:46.584-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-20T22:43:46.598-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}, exception=I/O error on DELETE request for "http://localhost:8761/eureka/apps/LOGISTOCK_MS_02_INVENTARIO/192.168.1.7:LogiStock_MS_02_Inventario:8082": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada stacktrace=org.springframework.web.client.ResourceAccessException: I/O error on DELETE request for "http://localhost:8761/eureka/apps/LOGISTOCK_MS_02_INVENTARIO/192.168.1.7:LogiStock_MS_02_Inventario:8082": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:915)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:895)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:790)
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:672)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateEurekaHttpClient.cancel(RestTemplateEurekaHttpClient.java:87)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.executeOnNewServer(RedirectingEurekaHttpClient.java:121)
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:80)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74)
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76)
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71)
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919)
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195)
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389)
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1195)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1156)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1102)
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.apache.hc.client5.http.HttpHostConnectException: Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:694)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327)
+	at java.base/java.net.Socket.connect(Socket.java:751)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.lambda$connectSocket$0(PlainConnectionSocketFactory.java:91)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:571)
+	at org.apache.hc.client5.http.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:90)
+	at org.apache.hc.client5.http.socket.ConnectionSocketFactory.connectSocket(ConnectionSocketFactory.java:123)
+	at org.apache.hc.client5.http.impl.io.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:189)
+	at org.apache.hc.client5.http.impl.io.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:450)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:162)
+	at org.apache.hc.client5.http.impl.classic.InternalExecRuntime.connectEndpoint(InternalExecRuntime.java:172)
+	at org.apache.hc.client5.http.impl.classic.ConnectExec.execute(ConnectExec.java:142)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ProtocolExec.execute(ProtocolExec.java:192)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.HttpRequestRetryExec.execute(HttpRequestRetryExec.java:113)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.ContentCompressionExec.execute(ContentCompressionExec.java:152)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.RedirectExec.execute(RedirectExec.java:116)
+	at org.apache.hc.client5.http.impl.classic.ExecChainElement.execute(ExecChainElement.java:51)
+	at org.apache.hc.client5.http.impl.classic.InternalHttpClient.doExecute(InternalHttpClient.java:170)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:87)
+	at org.apache.hc.client5.http.impl.classic.CloseableHttpClient.execute(CloseableHttpClient.java:55)
+	at org.apache.hc.client5.http.classic.HttpClient.executeOpen(HttpClient.java:183)
+	at org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:99)
+	at org.springframework.http.client.AbstractStreamingClientHttpRequest.executeInternal(AbstractStreamingClientHttpRequest.java:70)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:112)
+	at org.springframework.cloud.netflix.eureka.http.RestTemplateTransportClientFactory.lambda$restTemplate$3(RestTemplateTransportClientFactory.java:170)
+	at org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:88)
+	at org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:72)
+	at org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)
+	at org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:66)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:889)
+	... 38 more
+
+2026-06-20T22:43:46.599-04:00  WARN 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: I/O error on DELETE request for "http://localhost:8761/eureka/apps/LOGISTOCK_MS_02_INVENTARIO/192.168.1.7:LogiStock_MS_02_Inventario:8082": Connect to http://localhost:8761 [localhost/127.0.0.1] failed: Conexión rehusada
+2026-06-20T22:43:46.600-04:00 ERROR 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGISTOCK_MS_02_INVENTARIO/192.168.1.7:LogiStock_MS_02_Inventario:8082 - de-registration failedCannot execute request on any known server
+
+com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:112) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$2.execute(EurekaHttpClientDecorator.java:74) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:76) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.cancel(EurekaHttpClientDecorator.java:71) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.DiscoveryClient.unregister(DiscoveryClient.java:919) ~[eureka-client-2.0.3.jar:2.0.3]
+	at com.netflix.discovery.DiscoveryClient.shutdown(DiscoveryClient.java:900) ~[eureka-client-2.0.3.jar:2.0.3]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMethod.invoke(InitDestroyAnnotationBeanPostProcessor.java:457) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeDestroyMethods(InitDestroyAnnotationBeanPostProcessor.java:415) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeDestruction(InitDestroyAnnotationBeanPostProcessor.java:239) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:202) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.run(DisposableBeanAdapter.java:195) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.cloud.context.scope.GenericScope$BeanLifecycleWrapper.destroy(GenericScope.java:389) ~[spring-cloud-context-4.1.4.jar:4.1.4]
+	at org.springframework.cloud.context.scope.GenericScope.destroy(GenericScope.java:136) ~[spring-cloud-context-4.1.4.jar:4.1.4]
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:211) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1202) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1195) ~[spring-beans-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1195) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1156) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:174) ~[spring-boot-3.3.5.jar:3.3.5]
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:1102) ~[spring-context-6.1.14.jar:6.1.14]
+	at org.springframework.boot.SpringApplicationShutdownHook.closeAndWait(SpringApplicationShutdownHook.java:145) ~[spring-boot-3.3.5.jar:3.3.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.boot.SpringApplicationShutdownHook.run(SpringApplicationShutdownHook.java:114) ~[spring-boot-3.3.5.jar:3.3.5]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-06-20T22:43:46.602-04:00  INFO 80138 --- [LogiStock_MS_02_Inventario] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-20T22:52:34.232-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] c.e.L.LogiStockMs02Application           : Starting LogiStockMs02Application using Java 21.0.11 with PID 98969 (/home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario/target/classes started by sebas in /home/sebas/Escritorio/LogiStock_MS/LogiStock_MS_02_Inventario)
+2026-06-20T22:52:34.236-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] c.e.L.LogiStockMs02Application           : No active profile set, falling back to 1 default profile: "default"
+2026-06-20T22:52:35.630-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-20T22:52:35.915-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 270 ms. Found 1 JPA repository interface.
+2026-06-20T22:52:36.396-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=add5597f-8074-34b9-a797-df2f8b6b07c1
+2026-06-20T22:52:36.674-04:00  WARN 98969 --- [logistock-ms-02-inventario] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-06-20T22:52:36.678-04:00  WARN 98969 --- [logistock-ms-02-inventario] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-06-20T22:52:37.106-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-06-20T22:52:37.142-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-20T22:52:37.143-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.31]
+2026-06-20T22:52:37.274-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-20T22:52:37.275-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2939 ms
+2026-06-20T22:52:37.766-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-20T22:52:38.452-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@42aa1324
+2026-06-20T22:52:38.456-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-20T22:52:38.563-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:mysql://localhost:3306/logiStock_MS_02 (MySQL 8.0)
+2026-06-20T22:52:38.648-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Schema history table `logiStock_MS_02`.`flyway_schema_history` does not exist yet
+2026-06-20T22:52:38.656-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.040s)
+2026-06-20T22:52:38.701-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table `logiStock_MS_02`.`flyway_schema_history` ...
+2026-06-20T22:52:38.810-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.f.core.internal.command.DbMigrate      : Current version of schema `logiStock_MS_02`: << Empty Schema >>
+2026-06-20T22:52:38.825-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "1 - crear tablas"
+2026-06-20T22:52:38.917-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.f.core.internal.command.DbMigrate      : Migrating schema `logiStock_MS_02` to version "2 - insertar inventarios"
+2026-06-20T22:52:38.980-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.f.core.internal.command.DbMigrate      : Successfully applied 2 migrations to schema `logiStock_MS_02`, now at version v2 (execution time 00:00.039s)
+2026-06-20T22:52:39.155-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-20T22:52:39.262-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2026-06-20T22:52:39.354-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-20T22:52:39.930-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-20T22:52:41.611-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-20T22:52:41.679-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-20T22:52:42.399-04:00  WARN 98969 --- [logistock-ms-02-inventario] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-20T22:52:43.402-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-06-20T22:52:43.500-04:00  WARN 98969 --- [logistock-ms-02-inventario] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-20T22:52:43.556-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-20T22:52:43.610-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-20T22:52:43.619-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-20T22:52:43.636-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-20T22:52:43.636-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-20T22:52:43.636-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-20T22:52:43.636-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-20T22:52:43.637-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-20T22:52:43.637-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-20T22:52:43.638-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-20T22:52:44.180-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-20T22:52:44.184-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-20T22:52:44.188-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-20T22:52:44.193-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782010364190 with initial instances count: 1
+2026-06-20T22:52:44.202-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application LOGISTOCK-MS-02-INVENTARIO with eureka with status UP
+2026-06-20T22:52:44.204-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782010364203, current=UP, previous=STARTING]
+2026-06-20T22:52:44.207-04:00  INFO 98969 --- [logistock-ms-02-inventario] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGISTOCK-MS-02-INVENTARIO/192.168.1.7:logistock-ms-02-inventario:8082: registering service...
+2026-06-20T22:52:44.254-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-06-20T22:52:44.256-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-06-20T22:52:44.294-04:00  INFO 98969 --- [logistock-ms-02-inventario] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_LOGISTOCK-MS-02-INVENTARIO/192.168.1.7:logistock-ms-02-inventario:8082 - registration status: 204
+2026-06-20T22:52:44.313-04:00  INFO 98969 --- [logistock-ms-02-inventario] [main] c.e.L.LogiStockMs02Application           : Started LogiStockMs02Application in 10.975 seconds (process running for 11.638)

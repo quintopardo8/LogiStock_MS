@@ -1,0 +1,19 @@
+server:
+  port: 8761 
+
+spring:
+  application:
+    name: eureka-server
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false # Evita que Eureka intente registrarse a sí mismo como un microservicio
+    fetch-registry: false       # No necesita descargar el registro de ningún lado, él es el dueño
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 2000

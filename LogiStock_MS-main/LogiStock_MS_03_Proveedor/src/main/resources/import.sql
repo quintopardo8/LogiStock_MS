@@ -1,0 +1,3 @@
+INSERT INTO proveedores (rut, nombre, contacto_telefono, contacto_email, direccion, estado) VALUES ('11.111.111-1', 'Distribuidora LogiStock Chile', '+56912345678', 'contacto@logichile.cl', 'Av. Alemania 123, Valparaíso', 'ACTIVO');
+INSERT INTO proveedores (rut, nombre, contacto_telefono, contacto_email, direccion, estado) VALUES ('22.222.222-2', 'TecnoSuministros S.A.', '+56987654321', 'ventas@tecnosumi.cl', 'Calle Limache 456, Viña del Mar', 'ACTIVO');
+INSERT INTO proveedores (rut, nombre, contacto_telefono, contacto_email, direccion, estado) VALUES ('33.333.333-3', 'Ferretería Industrial S.A.', '+56955554444', 'industrial@ferre.cl', 'Camino Internacional 789, Concon', 'INACTIVO');

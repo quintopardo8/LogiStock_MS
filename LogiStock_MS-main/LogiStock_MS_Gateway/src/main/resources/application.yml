@@ -1,0 +1,45 @@
+server:
+  port: 8080
+ 
+spring:
+  application:
+    name: gateway-service
+ 
+  cloud:
+    gateway:
+      routes:
+        - id: productos
+          uri: lb://logistock-ms-01-productos
+          predicates:
+            - Path=/api/v1/productos/**, /api/v1/categorias/**
+ 
+        - id: inventario
+          uri: lb://logistock-ms-02-inventario
+          predicates:
+            - Path=/api/v1/inventarios/**
+            
+        - id: proveedor
+          uri: lb://logistock-ms-03-proveedor
+          predicates:
+            - Path=/api/v1/proveedores/**
+
+        - id: cliente
+          uri: lb://logistock-ms-04-cliente
+          predicates:
+            - Path=/api/v1/clientes/** 
+
+        - id: ordenescompra
+          uri: lb://logistock-ms-05-ordenes-compra
+          predicates:
+            - Path=/api/v1/ordenes-compra/**
+
+        - id: ordenesdespacho
+          uri: lb://logistock-ms-06-ordenes-despacho
+          predicates:
+            - Path=/api/v1/ordenes-despacho/**    
+ 
+ 
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_URL:http://localhost:8761/eureka}
