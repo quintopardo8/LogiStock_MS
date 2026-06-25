@@ -44,7 +44,7 @@ public class ClienteServiceImpl implements IClienteService {
         }
         
         Cliente cliente = clienteMapper.toEntity(request);
-        cliente.setEstado(Estado.ACTIVO); // Forzamos estado inicial
+        cliente.setEstado(Estado.ACTIVO);
         
         return clienteMapper.toResponse(clienteRepository.save(cliente));
     }

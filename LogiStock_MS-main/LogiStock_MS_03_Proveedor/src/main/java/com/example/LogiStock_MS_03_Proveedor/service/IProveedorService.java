@@ -13,7 +13,7 @@ public interface IProveedorService {
 
     ProveedorResponse buscarPorId(Long id);
 
-    ProveedorResponse actualizarProveedor(
-        Long id,ProveedorRequest request);
+    ProveedorResponse actualizarProveedor(Long id, ProveedorRequest request);
+
     void eliminarProveedor(Long id);
 }

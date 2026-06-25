@@ -1,7 +1,9 @@
 package LogiStock_MS_04_Cliente.dto.request;
 
+import LogiStock_MS_04_Cliente.model.Estado;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
@@ -25,4 +27,7 @@ public class ClienteRequest {
 
     @NotBlank(message = "La dirección es obligatoria") 
     private String direccion;
+
+    @NotNull(message = "El estado es obligatorio")
+    private Estado estado;
 }

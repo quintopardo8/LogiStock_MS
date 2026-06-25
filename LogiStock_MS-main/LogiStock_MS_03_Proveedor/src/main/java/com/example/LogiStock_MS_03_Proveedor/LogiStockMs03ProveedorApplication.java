@@ -9,9 +9,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class LogiStockMs03ProveedorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(
-                LogiStockMs03ProveedorApplication.class,
-                args
-        );
+        SpringApplication.run(LogiStockMs03ProveedorApplication.class, args);
     }
 }

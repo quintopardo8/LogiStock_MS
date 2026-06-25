@@ -49,7 +49,6 @@ public class ProveedorControllerTest {
         proveedorSample.setEstado("ACTIVO");
     }
 
-    // 1. Test Listar todo (HTTP 200)
     @Test
     void testListarProveedores_Exito() throws Exception {
         List<ProveedorResponse> lista = Arrays.asList(proveedorSample);
@@ -61,7 +60,6 @@ public class ProveedorControllerTest {
                 .andExpect(jsonPath("$[0].nombre").value("Distribuidora LogiStock Chile"));
     }
 
-    // 2. Test Buscar por ID Existente (HTTP 200)
     @Test
     void testBuscarPorId_Exito() throws Exception {
         when(service.buscarPorId(1L)).thenReturn(proveedorSample);
@@ -72,7 +70,6 @@ public class ProveedorControllerTest {
                 .andExpect(jsonPath("$.rut").value("12345678-9"));
     }
 
-    // 3. Test Crear Proveedor (HTTP 201)
     @Test
     void testCrearProveedor_Exito() throws Exception {
         ProveedorRequest request = new ProveedorRequest(
@@ -92,7 +89,6 @@ public class ProveedorControllerTest {
                 .andExpect(jsonPath("$.id").value(1L));
     }
 
-    // 4. Test Eliminar Proveedor (HTTP 204)
     @Test
     void testEliminarProveedor_Exito() throws Exception {
         doNothing().when(service).eliminarProveedor(1L);
@@ -102,7 +98,6 @@ public class ProveedorControllerTest {
                 .andExpect(status().isNoContent());
     }
 
-    // 5. Test Modificar/Actualizar Proveedor (HTTP 200)
     @Test
     void testActualizarProveedor_Exito() throws Exception {
         ProveedorRequest request = new ProveedorRequest(

@@ -8,16 +8,10 @@ import lombok.Setter;
 public class ProveedorResponse {
 
     private Long id;
-
     private String rut;
-
     private String nombre;
-
     private String contactoTelefono;
-
     private String contactoEmail;
-
     private String direccion;
-
     private String estado;
 }

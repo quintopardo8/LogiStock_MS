@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/clientes")
+@RequestMapping("/api/v1/clientes")
 public class ClienteController {
 
     private final IClienteService service;
@@ -43,10 +43,6 @@ public class ClienteController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
-        if (id == null || id <= 0) {
-            return ResponseEntity.badRequest().build(); 
-        }
-        
         service.eliminarCliente(id);
         return ResponseEntity.noContent().build();
     }
