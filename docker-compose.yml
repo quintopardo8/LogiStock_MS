@@ -1,0 +1,124 @@
+version: '3.8'
+
+services:
+  logistock-db:
+    image: mysql:8.0
+    container_name: logistock-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: logistock_db
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - logistock-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  eureka-server:
+    build:
+      context: ./eureka-server
+      dockerfile: Dockerfile
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+    networks:
+      - logistock-network
+    depends_on:
+      logistock-db:
+        condition: service_healthy
+
+  productos-service:
+    build:
+      context: ./LogiStock_MS_01_Productos
+      dockerfile: Dockerfile
+    container_name: logistock-ms-productos
+    ports:
+      - "8081:8081"
+    networks:
+      - logistock-network
+    depends_on:
+      - eureka-server
+
+  inventario-service:
+    build:
+      context: ./LogiStock_MS_02_Inventario
+      dockerfile: Dockerfile
+    container_name: logistock-ms-inventario
+    ports:
+      - "8082:8082"
+    networks:
+      - logistock-network
+    depends_on:
+      - eureka-server
+
+  proveedor-service:
+    build:
+      context: ./LogiStock_MS_03_Proveedor
+      dockerfile: Dockerfile
+    container_name: logistock-ms-proveedor
+    ports:
+      - "8083:8083"
+    networks:
+      - logistock-network
+    depends_on:
+      - eureka-server
+
+  cliente-service:
+    build:
+      context: ./LogiStock_MS_04_Cliente
+      dockerfile: Dockerfile
+    container_name: logistock-ms-cliente
+    ports:
+      - "8084:8084"
+    networks:
+      - logistock-network
+    depends_on:
+      - eureka-server
+
+  ordenes-compra-service:
+    build:
+      context: ./LogiStock_MS_05_Ordenes_Compra
+      dockerfile: Dockerfile
+    container_name: logistock-ms-ordenes-compra
+    ports:
+      - "8085:8085"
+    networks:
+      - logistock-network
+    depends_on:
+      - eureka-server
+
+  ordenes-despacho-service:
+    build:
+      context: ./LogiStock_MS_06_Ordenes_Despacho
+      dockerfile: Dockerfile
+    container_name: logistock-ms-ordenes-despacho
+    ports:
+      - "8086:8086"
+    networks:
+      - logistock-network
+    depends_on:
+      - eureka-server
+
+  gateway-service:
+    build:
+      context: ./LogiStock_MS_Gateway
+      dockerfile: Dockerfile
+    container_name: gateway-service
+    ports:
+      - "8080:8080"
+    networks:
+      - logistock-network
+    depends_on:
+      - eureka-server
+
+volumes:
+  mysql_data:
+
+networks:
+  logistock-network:
+    driver: bridge
