@@ -1,16 +1,14 @@
-version: '3.8'
-
 services:
   logistock-db:
     image: mysql:8.0
     container_name: logistock-mysql
     ports:
-      - "3306:3306"
+      - "3307:3306"
     environment:
-      MYSQL_DATABASE: logistock_db
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - mysql_data:/var/lib/mysql
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
     networks:
       - logistock-network
     healthcheck:
@@ -39,6 +37,13 @@ services:
     container_name: logistock-ms-productos
     ports:
       - "8081:8081"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DATABASE_URL: jdbc:mysql://logistock-db:3306/logiStock_MS_01
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      EUREKA_URL: http://eureka-server:8761/eureka
+      PORT: 8081
     networks:
       - logistock-network
     depends_on:
@@ -51,6 +56,13 @@ services:
     container_name: logistock-ms-inventario
     ports:
       - "8082:8082"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DATABASE_URL: jdbc:mysql://logistock-db:3306/logiStock_MS_02
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      EUREKA_URL: http://eureka-server:8761/eureka
+      PORT: 8082
     networks:
       - logistock-network
     depends_on:
@@ -63,6 +75,13 @@ services:
     container_name: logistock-ms-proveedor
     ports:
       - "8083:8083"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DATABASE_URL: jdbc:mysql://logistock-db:3306/logiStock_MS_03
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      EUREKA_URL: http://eureka-server:8761/eureka
+      PORT: 8083
     networks:
       - logistock-network
     depends_on:
@@ -75,6 +94,13 @@ services:
     container_name: logistock-ms-cliente
     ports:
       - "8084:8084"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DATABASE_URL: jdbc:mysql://logistock-db:3306/logiStock_MS_04
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      EUREKA_URL: http://eureka-server:8761/eureka
+      PORT: 8084
     networks:
       - logistock-network
     depends_on:
@@ -87,6 +113,13 @@ services:
     container_name: logistock-ms-ordenes-compra
     ports:
       - "8085:8085"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DATABASE_URL: jdbc:mysql://logistock-db:3306/logiStock_MS_05
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      EUREKA_URL: http://eureka-server:8761/eureka
+      PORT: 8085
     networks:
       - logistock-network
     depends_on:
@@ -99,6 +132,13 @@ services:
     container_name: logistock-ms-ordenes-despacho
     ports:
       - "8086:8086"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      DATABASE_URL: jdbc:mysql://logistock-db:3306/logiStock_MS_06
+      DB_USERNAME: root
+      DB_PASSWORD: root
+      EUREKA_URL: http://eureka-server:8761/eureka
+      PORT: 8086
     networks:
       - logistock-network
     depends_on:

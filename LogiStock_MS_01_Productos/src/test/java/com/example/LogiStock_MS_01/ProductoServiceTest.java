@@ -76,7 +76,25 @@ class ProductoServiceTest {
 
     }
 
+    @Test
+    @DisplayName("Debe lanzar ProductoNoEncontradoException cuando el ID no existe")
+    void debeLanzarExcepcionCuandoIdNoExiste() {
+    // Given
+    when(productoRepository.findById(99L))
+           .thenReturn(Optional.empty());
 
+    // When & Then 
+    ProductoNoEncontradoException excepcion = assertThrows(
+            ProductoNoEncontradoException.class,
+                    () -> productoService.obtenerPorId(99L),
+            "Debe lanzar ProductoNoEncontradoException cuando el ID no existe"
+            );
+
+    assertNotNull(excepcion.getMessage());
+
+    verify(productoMapper, never()).toResponse(any());
+    }
+    
 
 
 
